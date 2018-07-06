@@ -458,6 +458,10 @@ class ComposerStaticInitf1b38c2bdf82c88dc6508833cbfc495a
     );
 
     public static $classMap = array (
+        'App\\Admin\\Controllers\\DepartmeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/DepartmeController.php',
+        'App\\Admin\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ExampleController.php',
+        'App\\Admin\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/HomeController.php',
+        'App\\Admin\\Controllers\\PositionController' => __DIR__ . '/../..' . '/app/Admin/Controllers/PositionController.php',
         'App\\Console\\Commands\\RedisSubscribe' => __DIR__ . '/../..' . '/app/Console/Commands/RedisSubscribe.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -469,13 +473,16 @@ class ComposerStaticInitf1b38c2bdf82c88dc6508833cbfc495a
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\TestController' => __DIR__ . '/../..' . '/app/Http/Controllers/TestController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
+        'App\\Http\\Middleware\\AdminCheckCustom' => __DIR__ . '/../..' . '/app/Http/Middleware/AdminCheckCustom.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Resources\\UserCollection' => __DIR__ . '/../..' . '/app/Http/Resources/UserCollection.php',
+        'App\\Models\\DepartmeModel' => __DIR__ . '/../..' . '/app/Models/DepartmeModel.php',
         'App\\Models\\Good' => __DIR__ . '/../..' . '/app/Models/Good.php',
+        'App\\Models\\PositionModel' => __DIR__ . '/../..' . '/app/Models/PositionModel.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',

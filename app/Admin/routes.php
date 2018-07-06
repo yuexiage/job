@@ -12,4 +12,5 @@ Route::group([
 
     $router->get('/', 'HomeController@index');
     $router->resource('departme', DepartmeController::class);
+    $router->resource('position', PositionController::class);
 });

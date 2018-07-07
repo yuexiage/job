@@ -23,7 +23,7 @@ class CreatePositionTable extends Migration
             $table->tinyInteger('type')->default(2)->comment('工作类型1:兼职,2:全职');     
             $table->smallInteger('num')->comment('招聘人数');  
             $table->smallInteger('departme')->comment('招聘部门'); 
-            $table->smallInteger('position')->comment('职位'); 
+            $table->smallInteger('position_type')->comment('职位');
             $table->text('description')->comment('职位描述');
             $table->text('claim')->comment('岗位要求');
             $table->timestamps();

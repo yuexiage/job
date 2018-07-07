@@ -459,9 +459,11 @@ class ComposerStaticInitf1b38c2bdf82c88dc6508833cbfc495a
 
     public static $classMap = array (
         'App\\Admin\\Controllers\\DepartmeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/DepartmeController.php',
+        'App\\Admin\\Controllers\\EducationController' => __DIR__ . '/../..' . '/app/Admin/Controllers/EducationController.php',
         'App\\Admin\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ExampleController.php',
         'App\\Admin\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/HomeController.php',
         'App\\Admin\\Controllers\\PositionController' => __DIR__ . '/../..' . '/app/Admin/Controllers/PositionController.php',
+        'App\\Admin\\Extensions\\TinEditor' => __DIR__ . '/../..' . '/app/Admin/Extensions/TinEditor.php',
         'App\\Console\\Commands\\RedisSubscribe' => __DIR__ . '/../..' . '/app/Console/Commands/RedisSubscribe.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -481,6 +483,7 @@ class ComposerStaticInitf1b38c2bdf82c88dc6508833cbfc495a
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Resources\\UserCollection' => __DIR__ . '/../..' . '/app/Http/Resources/UserCollection.php',
         'App\\Models\\DepartmeModel' => __DIR__ . '/../..' . '/app/Models/DepartmeModel.php',
+        'App\\Models\\EducationModel' => __DIR__ . '/../..' . '/app/Models/EducationModel.php',
         'App\\Models\\Good' => __DIR__ . '/../..' . '/app/Models/Good.php',
         'App\\Models\\PositionModel' => __DIR__ . '/../..' . '/app/Models/PositionModel.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',

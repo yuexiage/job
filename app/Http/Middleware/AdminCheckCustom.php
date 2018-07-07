@@ -28,8 +28,8 @@ class AdminCheckCustom
                 if(in_array($controller,$controllers)){
                     if(!Admin::user()->can(strtolower($departme.'.'.$controller))){                 #判断只包含控制器的权限
                         if(!Admin::user()->can(strtolower($departme.'.'.$controller.'.'.$action))){  #判断包含控制器和方法的权限
-                            $response = response(Admin::content()->withError(trans('admin.deny')));
-                            Pjax::respond($response);
+                            #$response = response(Admin::content()->withError(trans('admin.deny')));
+                            #Pjax::respond($response);
                         }
                     }
                 }

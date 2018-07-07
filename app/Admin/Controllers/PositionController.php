@@ -25,7 +25,7 @@ class PositionController extends Controller
         return Admin::content(function (Content $content) {
 
             $content->header('招聘职位');
-            $content->description('创建招聘职位');
+            $content->description('职位列表');
 
             $content->body($this->grid());
         });
@@ -92,7 +92,7 @@ class PositionController extends Controller
             $form->display('id', 'ID');
             $form->text('title', '标题')->rules('required|max:20');
             $directors = [
-                ' 1'  =>'John',
+                '1'  =>'John',
                 '2' => 'Smith',
                 '3'  => 'Kate',
             ];
@@ -101,7 +101,7 @@ class PositionController extends Controller
             $form->select('city', '招聘地区')->options($directors)->rules('required');
             $form->select('type', '工作类型')->options(['1'=>'兼职','2'=>'全职'])->rules('required');
             $form->select('departme', '招聘部门')->options(DepartmeModel::all()->pluck('departme_name', 'id'))->rules('required');
-            $form->select('position', '职位')->options($directors)->rules('required');
+            $form->select('position_type', '职位')->options($directors)->rules('required');
             $form->number('num', '招聘人数')->rules('required|min:1')->min(1);
             $form->switch('publish', '发布？')->default(1)->rules('required');
             $form->tineditor('description','职位描述')->rules('required');

@@ -110,7 +110,7 @@ class UserController extends Controller
 
             $form->ignore(['password_confirmation']);
 
-            $form->select('departme', '所在部门')->options(DepartmeModel::all()->pluck('departme_name', 'alias'));
+            $form->select('departme', '所在部门')->options(DepartmeModel::all()->pluck('departme_name', 'id'));
             $form->multipleSelect('roles', trans('admin.roles'))->options(Role::all()->pluck('name', 'id'));
             $form->multipleSelect('permissions', trans('admin.permissions'))->options(Permission::all()->pluck('name', 'id'));
 

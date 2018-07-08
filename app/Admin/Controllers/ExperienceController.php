@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\DepartmeModel;
+use App\Models\ExperienceModel;
 
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -10,8 +10,8 @@ use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
-use Encore\Admin\Auth\Permission;
-class DepartmeController extends Controller
+
+class ExperienceController extends Controller
 {
     use ModelForm;
 
@@ -22,11 +22,10 @@ class DepartmeController extends Controller
      */
     public function index()
     {
-        $departme = Admin::user()->departme;
         return Admin::content(function (Content $content) {
 
-            $content->header('部门管理');
-            $content->description('部门列表');
+            $content->header('经验');
+            $content->description('列表');
 
             $content->body($this->grid());
         });
@@ -42,8 +41,8 @@ class DepartmeController extends Controller
     {
         return Admin::content(function (Content $content) use ($id) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header('编辑');
+            $content->description('经验');
 
             $content->body($this->form()->edit($id));
         });
@@ -58,8 +57,8 @@ class DepartmeController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header('编辑');
+            $content->description('经验');
 
             $content->body($this->form());
         });
@@ -72,20 +71,12 @@ class DepartmeController extends Controller
      */
     protected function grid()
     {
-        return Admin::grid(DepartmeModel::class, function (Grid $grid) {
-            $isAdmin = Admin::user()->isAdministrator();
-            if(!$isAdmin){
-                $departme = Admin::User()->departme;
-                $grid->model()->where('id',$departme);
-            }
+        return Admin::grid(ExperienceModel::class, function (Grid $grid) {
+
             $grid->id('ID')->sortable();
-            $grid->departme_name('部门名称')->sortable();
+            $grid->name('经验名称')->sortable();
             $grid->created_at('创建时间');
-            $grid->updated_at('修改时间');
-            $grid->filter(function ($filter){
-                $filter->like('departme_name', '部门名称');
-                $filter->like('alias', '别名');
-            });
+            $grid->updated_at('更新时间');
         });
     }
 
@@ -96,12 +87,12 @@ class DepartmeController extends Controller
      */
     protected function form()
     {
-        return Admin::form(DepartmeModel::class, function (Form $form) {
+        return Admin::form(ExperienceModel::class, function (Form $form) {
 
             $form->display('id', 'ID');
-            $form->text('departme_name', '部门名称')->rules('required');
+            $form->text('name', '经验名称')->rules('required');
             $form->display('created_at', '创建时间');
-            $form->display('updated_at', '修改时间');
+            $form->display('updated_at', '更新时间');
         });
     }
 }

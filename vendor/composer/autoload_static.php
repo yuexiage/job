@@ -485,7 +485,8 @@ class ComposerStaticInitf1b38c2bdf82c88dc6508833cbfc495a
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Resources\\UserCollection' => __DIR__ . '/../..' . '/app/Http/Resources/UserCollection.php',
-        'App\\Models\\PositionTypeModel' => __DIR__ . '/../..' . '/app/Models/PositionTypeModel.php',        'App\\Models\\CityModel' => __DIR__ . '/../..' . '/app/Models/CityModel.php',
+        'App\\Models\\PositionTypeModel' => __DIR__ . '/../..' . '/app/Models/PositionTypeModel.php',        
+		'App\\Models\\CityModel' => __DIR__ . '/../..' . '/app/Models/CityModel.php',
 
         'App\\Models\\DepartmeModel' => __DIR__ . '/../..' . '/app/Models/DepartmeModel.php',
         'App\\Models\\EducationModel' => __DIR__ . '/../..' . '/app/Models/EducationModel.php',

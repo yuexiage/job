@@ -4,27 +4,15 @@
 
 $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
-
 return array(
-<<<<<<< HEAD
-<<<<<<< HEAD
     'App\\Admin\\Controllers\\DepartmeController' => $baseDir . '/app/Admin/Controllers/DepartmeController.php',
     'App\\Admin\\Controllers\\EducationController' => $baseDir . '/app/Admin/Controllers/EducationController.php',
-=======
     'App\\Admin\\Controllers\\CityController' => $baseDir . '/app/Admin/Controllers/CityController.php',
-    'App\\Admin\\Controllers\\DepartmeController' => $baseDir . '/app/Admin/Controllers/DepartmeController.php',
->>>>>>> remotes/origin/city
     'App\\Admin\\Controllers\\ExampleController' => $baseDir . '/app/Admin/Controllers/ExampleController.php',
     'App\\Admin\\Controllers\\HomeController' => $baseDir . '/app/Admin/Controllers/HomeController.php',
     'App\\Admin\\Controllers\\PositionController' => $baseDir . '/app/Admin/Controllers/PositionController.php',
     'App\\Admin\\Extensions\\TinEditor' => $baseDir . '/app/Admin/Extensions/TinEditor.php',
-=======
-    'App\\Admin\\Controllers\\CityController' => $baseDir . '/app/Admin/Controllers/CityController.php',
-    'App\\Admin\\Controllers\\DepartmeController' => $baseDir . '/app/Admin/Controllers/DepartmeController.php',
-    'App\\Admin\\Controllers\\ExampleController' => $baseDir . '/app/Admin/Controllers/ExampleController.php',
-    'App\\Admin\\Controllers\\HomeController' => $baseDir . '/app/Admin/Controllers/HomeController.php',
     'App\\Admin\\Controllers\\PositionTypeController' => $baseDir . '/app/Admin/Controllers/PositionTypeController.php',
->>>>>>> remotes/origin/position_type
     'App\\Console\\Commands\\RedisSubscribe' => $baseDir . '/app/Console/Commands/RedisSubscribe.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
@@ -43,20 +31,12 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Http\\Resources\\UserCollection' => $baseDir . '/app/Http/Resources/UserCollection.php',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     'App\\Models\\CityModel' => $baseDir . '/app/Models/CityModel.php',
->>>>>>> remotes/origin/city
     'App\\Models\\DepartmeModel' => $baseDir . '/app/Models/DepartmeModel.php',
     'App\\Models\\EducationModel' => $baseDir . '/app/Models/EducationModel.php',
     'App\\Models\\Good' => $baseDir . '/app/Models/Good.php',
     'App\\Models\\PositionModel' => $baseDir . '/app/Models/PositionModel.php',
-=======
-    'App\\Models\\DepartmeModel' => $baseDir . '/app/Models/DepartmeModel.php',
-    'App\\Models\\Good' => $baseDir . '/app/Models/Good.php',
     'App\\Models\\PositionTypeModel' => $baseDir . '/app/Models/PositionTypeModel.php',
->>>>>>> remotes/origin/position_type
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',

@@ -15,6 +15,7 @@ return array(
     'App\\Admin\\Controllers\\PositionController' => $baseDir . '/app/Admin/Controllers/PositionController.php',
     'App\\Admin\\Controllers\\PositionTypeController' => $baseDir . '/app/Admin/Controllers/PositionTypeController.php',
     'App\\Admin\\Extensions\\TinEditor' => $baseDir . '/app/Admin/Extensions/TinEditor.php',
+    'App\\Admin\\Extensions\\Tools\\Publish' => $baseDir . '/app/Admin/Extensions/Tools/Publish.php',
     'App\\Console\\Commands\\RedisSubscribe' => $baseDir . '/app/Console/Commands/RedisSubscribe.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',

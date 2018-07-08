@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGoodsTable extends Migration
+class CreateDepartmeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateGoodsTable extends Migration
      */
     public function up()
     {
-        Schema::create('goods', function (Blueprint $table) {
+        Schema::create('departme', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('goods_sn'); //商品货号
-            $table->string('goods_name');//商品名
-            $table->decimal('prize', 10, 2); //价格
+            $table->string('departme_name')->index('departme_name')->comment('部门名称');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateGoodsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('goods');
+        Schema::dropIfExists('departme');
     }
 }

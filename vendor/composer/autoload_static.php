@@ -467,6 +467,7 @@ class ComposerStaticInitf1b38c2bdf82c88dc6508833cbfc495a
         'App\\Admin\\Controllers\\PositionController' => __DIR__ . '/../..' . '/app/Admin/Controllers/PositionController.php',
         'App\\Admin\\Controllers\\PositionTypeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/PositionTypeController.php',
         'App\\Admin\\Extensions\\TinEditor' => __DIR__ . '/../..' . '/app/Admin/Extensions/TinEditor.php',
+        'App\\Admin\\Extensions\\Tools\\Publish' => __DIR__ . '/../..' . '/app/Admin/Extensions/Tools/Publish.php',
         'App\\Console\\Commands\\RedisSubscribe' => __DIR__ . '/../..' . '/app/Console/Commands/RedisSubscribe.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',

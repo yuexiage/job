@@ -458,8 +458,13 @@ class ComposerStaticInitf1b38c2bdf82c88dc6508833cbfc495a
     );
 
     public static $classMap = array (
+<<<<<<< HEAD
         'App\\Admin\\Controllers\\DepartmeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/DepartmeController.php',
         'App\\Admin\\Controllers\\EducationController' => __DIR__ . '/../..' . '/app/Admin/Controllers/EducationController.php',
+=======
+        'App\\Admin\\Controllers\\CityController' => __DIR__ . '/../..' . '/app/Admin/Controllers/CityController.php',
+        'App\\Admin\\Controllers\\DepartmeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/DepartmeController.php',
+>>>>>>> remotes/origin/city
         'App\\Admin\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ExampleController.php',
         'App\\Admin\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/HomeController.php',
         'App\\Admin\\Controllers\\PositionController' => __DIR__ . '/../..' . '/app/Admin/Controllers/PositionController.php',
@@ -482,6 +487,10 @@ class ComposerStaticInitf1b38c2bdf82c88dc6508833cbfc495a
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Resources\\UserCollection' => __DIR__ . '/../..' . '/app/Http/Resources/UserCollection.php',
+<<<<<<< HEAD
+=======
+        'App\\Models\\CityModel' => __DIR__ . '/../..' . '/app/Models/CityModel.php',
+>>>>>>> remotes/origin/city
         'App\\Models\\DepartmeModel' => __DIR__ . '/../..' . '/app/Models/DepartmeModel.php',
         'App\\Models\\EducationModel' => __DIR__ . '/../..' . '/app/Models/EducationModel.php',
         'App\\Models\\Good' => __DIR__ . '/../..' . '/app/Models/Good.php',

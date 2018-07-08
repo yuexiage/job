@@ -14,8 +14,6 @@ Route::group([
     $router->resource('departme', DepartmeController::class);
     $router->resource('position', PositionController::class);
     $router->resource('education', EducationController::class);
-<<<<<<< HEAD
-=======
+	$router->resource('position_type', PositionTypeController::class);
     $router->resource('city', CityController::class);
->>>>>>> remotes/origin/city
 });

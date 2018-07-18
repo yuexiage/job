@@ -22,7 +22,6 @@ class DepartmeController extends Controller
      */
     public function index()
     {
-        $departme = Admin::user()->departme;
         return Admin::content(function (Content $content) {
 
             $content->header('部门管理');

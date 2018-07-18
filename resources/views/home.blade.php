@@ -89,6 +89,14 @@
             </div>
         </div>
     </div>
+    <div class="footer f12 c999" style="background: rgb(42, 44, 55);">
+        <div class="text-info" style="padding-top: 4px;">
+            <span>已通过ISO27001:2013 信息安全认证</span>
+        </div>
+        <div class="text-info" style="margin-top: -13px;">
+            <span><div style="text-align:center"><span style="color:#D3D3D3">Copyright © 2018 瓜子二手车直卖网 &nbsp;Powered By&nbsp;</span><a href="http://www.dayee.com" target="_blank"><span style="color:#D3D3D3">Dayee</span></a></div></span>
+        </div>
+    </div>
     <script src="{{ asset('js/swiper.min.js?v=') }}{{time()}}"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {

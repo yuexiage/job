@@ -197,3 +197,21 @@ pad*/
     border-color: #ee5057;
     box-shadow: 0 0 0 0.2rem rgba(238,80,87,.25);
 }
+/*
+footer*/
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: #465153;
+    text-align: center;
+}
+.f12 {
+    font-size: 12px;
+}
+.c999 {
+    color: #999;
+}
+.footer .text-info {
+    height: 30px;
+    line-height: 30px;
+}

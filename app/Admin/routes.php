@@ -18,4 +18,5 @@ Route::group([
     $router->resource('city', CityController::class);
     $router->resource('experience', ExperienceController::class);                       #工作经验
     $router->resource('setting', SettingController::class);                             #工作经验
+    $router->resource('slide', SlideController::class);                                 #幻灯片
 });

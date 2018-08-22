@@ -11,13 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['namespace' => 'Web'], function () {
+    Route::get('/', 'HomeController@index');
+    Route::get('/home', 'HomeController@index');
+});
+
+
+
+
+
+
+
+
+
 Route::get('/test', 'TestController@test');
 Route::post('/test', 'TestController@test');
 Route::get('publish', function () {

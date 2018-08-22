@@ -137,14 +137,24 @@ class PositionController extends Controller
      */
     protected function form()
     {
+
         return Admin::form(PositionModel::class, function (Form $form) {
+            $where = [];
             $form->display('id', 'ID');
             $form->text('title', '标题')->rules('required|max:20');
             $form->select('experience', '工作经验')->options(ExperienceModel::all()->pluck('name', 'id'))->rules('required');
             $form->select('education', '学历')->options(EducationModel::all()->pluck('name', 'id'))->rules('required');
             $form->select('city', '招聘地区')->options(CityModel::all()->pluck('name', 'id'))->rules('required');
             $form->select('type', '工作类型')->options(['1'=>'兼职','2'=>'全职'])->rules('required');
-            $form->select('departme', '招聘部门')->options(DepartmeModel::all()->where('id',Admin::User()->departme)->pluck('departme_name', 'id'))->rules('required');
+
+            $isAdmin = Admin::user()->isAdministrator();
+            if(!$isAdmin){
+                $where['id'] = Admin::User()->departme;
+                $options =DepartmeModel::all()->where($where)->pluck('departme_name', 'id');
+            }else{
+                $options =DepartmeModel::all()->pluck('departme_name', 'id');
+            }
+            $form->select('departme', '招聘部门')->options($options)->rules('required');
             $form->select('position_type', '职位')->options(PositionTypeModel::all()->pluck('name', 'id'))->rules('required');
             $form->number('num', '招聘人数')->rules('required|min:1')->min(1);
             $form->switch('publish', '发布？')->default(1)->rules('required');

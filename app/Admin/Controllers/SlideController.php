@@ -90,8 +90,8 @@ class SlideController extends Controller
 
             $form->display('id', 'ID');
             $form->text('title','幻灯片名称')->placeholder('请输入幻灯片名称')->rules('required');
-            $form->image('img','图片')->removable();
-            $form->url('href','链接地址');
+            $form->image('img','图片')->removable()->rules('required');
+            $form->url('href','链接地址'); //TODO 链接未设置必填规则  却出现必填效果
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
         });

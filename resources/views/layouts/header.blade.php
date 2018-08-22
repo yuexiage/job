@@ -12,9 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
-    <title>后台管理系统</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <title>@yield('title')</title>
+    <meta name="keywords" content="@yield('keywords')">
+    <meta name="description" content=@yield('description')"">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--[if lt IE 9]>
     <meta http-equiv="refresh" content="0;ie.html"/>

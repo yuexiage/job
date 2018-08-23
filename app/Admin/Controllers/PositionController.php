@@ -102,6 +102,7 @@ class PositionController extends Controller
                 return PositionTypeModel::find($id)->name;
             })->sortable();
             $grid->num('招聘人数')->label();
+            $grid->delivery('投递数量')->label();
             $grid->type('工作类型')->display(function($id) {
                 $type = ['1'=>'兼职','2'=>'全职'];
                 return $type[$id];
@@ -139,7 +140,6 @@ class PositionController extends Controller
     {
 
         return Admin::form(PositionModel::class, function (Form $form) {
-            $where = [];
             $form->display('id', 'ID');
             $form->text('title', '标题')->rules('required|max:20');
             $form->select('experience', '工作经验')->options(ExperienceModel::all()->pluck('name', 'id'))->rules('required');
@@ -149,8 +149,8 @@ class PositionController extends Controller
 
             $isAdmin = Admin::user()->isAdministrator();
             if(!$isAdmin){
-                $where['id'] = Admin::User()->departme;
-                $options =DepartmeModel::all()->where($where)->pluck('departme_name', 'id');
+                $id      = Admin::User()->departme;
+                $options =DepartmeModel::all()->where('id',$id)->pluck('departme_name', 'id');
             }else{
                 $options =DepartmeModel::all()->pluck('departme_name', 'id');
             }

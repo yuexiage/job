@@ -215,3 +215,8 @@ footer*/
     height: 30px;
     line-height: 30px;
 }
+
+/***************/
+.position_list{
+    text-align: left;
+}

@@ -26,6 +26,7 @@ class CreatePositionTable extends Migration
             $table->smallInteger('position_type')->comment('职位');
             $table->text('description')->comment('职位描述');
             $table->text('claim')->comment('岗位要求');
+            $table->smallInteger('delivery')->comment('投递数量')->default(0);
             $table->timestamps();
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';

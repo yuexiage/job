@@ -52,12 +52,17 @@
     {{--relative--}}
     <div class="tm-section tm-position-relative">
         <div class="container tm-pt-5 tm-pb-4">
-            <div class="row text-center">
+            <div class="row">
                 <article class="col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-article">
                     <i class="fa tm-fa-6x fa-legal tm-color-primary tm-margin-b-20"></i>
                     <h3 class="tm-color-primary tm-article-title-1">最新</h3>
-                    <p>Pellentesque at velit ante. Duis scelerisque metus vel felis porttitor gravida. Donec at felis libero. Mauris odio tortor.</p>
-                    <a href="#" class="text-uppercase tm-color-primary tm-font-semibold">Continue reading...</a>
+                    <div class="position_list">
+                        <ul>
+                            @foreach($newposition as $row)
+                                <li>[{{isset($row->cityName->name)?$row->cityName->name:''}}] {{$row->title}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
                 </article>
                 <article class="col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-article">
                     <i class="fa tm-fa-6x fa-plane tm-color-primary tm-margin-b-20"></i>

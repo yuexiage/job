@@ -24,7 +24,7 @@ class TinEditor extends Field
             language: 'zh_CN',
             imageupload_url: '/misc/images/articleimages',
             plugins: [
-                'advlist autolink lists link image imagetools print preview anchor textcolor imageupload',
+                'advlist autolink lists link image imagetools print preview anchor textcolor ',
                 'searchreplace visualblocks code fullscreen ',
                 'insertdatetime media table contextmenu paste code wordcount'
             ],

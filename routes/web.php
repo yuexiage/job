@@ -17,6 +17,7 @@ Auth::routes();
 Route::group(['namespace' => 'Web'], function () {
     Route::get('/', 'HomeController@index');
     Route::get('/home', 'HomeController@index');
+    Route::get('/position/id/{id}', 'PositionController@index')->name('position_item');
 });
 
 

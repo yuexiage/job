@@ -29,3 +29,22 @@
     <script src="{{ asset('js/bootstrap.min.js?v=3.3.6') }}{{time()}}"></script>
 </head>
 <body>
+{{--header--}}
+<div class="layui-header header header-index tm-top-bar" summer="">
+    <div class="layui-main">
+        <a class="logo" href="/">
+            <img src="//res.layui.com/static/images/layui/logo.png" alt="layui">
+        </a>
+        <ul class="layui-nav" lay-filter="">
+            <li class="layui-nav-item
+            @if($menu == '')
+            layui-this
+            @endif
+            "><a href="/">首页</a></li>
+            @foreach($job_type as $key=> $row)
+            <li class="layui-nav-item {{$menu==$key?'layui-this':''}}" ><a href="">{{$row}}</a></li>
+            @endforeach
+            <li class="layui-nav-item"><a href="">关于我们</a></li>
+        </ul>
+    </div>
+</div>

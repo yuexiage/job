@@ -6,7 +6,6 @@ use App\Http\Controllers\BestController;
 use App\Models\PositionModel;
 use App\Models\SlideModel;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 class HomeController extends BestController
 {
     /**
@@ -33,6 +32,10 @@ class HomeController extends BestController
         $view_data['slides']        = $this->_getSlides();
         //最新招聘
         $view_data['newposition']   = $this->_getNewPosition();
+        //获取热门招聘
+        $view_data['hotposition']   = $this->_getHotPosition();
+        //获取急聘信息
+        $view_data['expeditedposition']   = $this->_getExpeditedPosition();
         return view('home',$view_data);
     }
 
@@ -52,5 +55,23 @@ class HomeController extends BestController
     public function _getNewPosition(){
         $newPosition = PositionModel::where('publish',1)->limit(5)->orderBy('created_at','DESC')->with('cityName')->get();
         return $newPosition;
+    }
+
+    /**
+     * 获取热门招聘
+     * @return mixed
+     */
+    public function _getHotPosition(){
+        $hotPosition = PositionModel::where('publish',1)->limit(5)->orderBy('delivery','DESC')->with('cityName')->get();
+        return $hotPosition;
+    }
+
+    /**
+     * 获取急聘信息
+     * @return mixed
+     */
+    public function _getExpeditedPosition(){
+        $expeditedPosition = PositionModel::where(['publish'=>1,'expedited'=>1])->limit(5)->orderBy('created_at','DESC')->with('cityName')->get();
+        return $expeditedPosition;
     }
 }

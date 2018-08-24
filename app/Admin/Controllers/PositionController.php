@@ -101,13 +101,20 @@ class PositionController extends Controller
             $grid->position_type('职位类型')->display(function($id) {
                 return PositionTypeModel::find($id)->name;
             })->sortable();
-            $grid->num('招聘人数')->label();
+            $grid->num('招聘人数')->display(function($id) {
+                if($id==0){
+                    return '若干';
+                }else{
+                    return $id;
+                }
+            })->label();
             $grid->delivery('投递数量')->label();
             $grid->type('工作类型')->display(function($id) {
-                $type = ['1'=>'兼职','2'=>'全职'];
+                $type = PositionModel::$type;
                 return $type[$id];
             })->sortable();
             $grid->publish('发布')->switch();
+            $grid->expedited('急聘')->switch();
             $grid->filter(function($filter){
                 // 去掉默认的id过滤器
                 $filter->disableIdFilter();
@@ -145,7 +152,7 @@ class PositionController extends Controller
             $form->select('experience', '工作经验')->options(ExperienceModel::all()->pluck('name', 'id'))->rules('required');
             $form->select('education', '学历')->options(EducationModel::all()->pluck('name', 'id'))->rules('required');
             $form->select('city', '招聘地区')->options(CityModel::all()->pluck('name', 'id'))->rules('required');
-            $form->select('type', '工作类型')->options(['1'=>'兼职','2'=>'全职'])->rules('required');
+            $form->select('type', '工作类型')->options(PositionModel::$type)->rules('required');
 
             $isAdmin = Admin::user()->isAdministrator();
             if(!$isAdmin){
@@ -156,8 +163,9 @@ class PositionController extends Controller
             }
             $form->select('departme', '招聘部门')->options($options)->rules('required');
             $form->select('position_type', '职位')->options(PositionTypeModel::all()->pluck('name', 'id'))->rules('required');
-            $form->number('num', '招聘人数')->rules('required|min:1')->min(1);
+            $form->number('num', '招聘人数')->rules('required|min:1')->min(0)->help('0不限制人数');
             $form->switch('publish', '发布？')->default(1)->rules('required');
+            $form->switch('expedited', '急聘？')->default(1)->rules('required');
             $form->tineditor('description','职位描述')->rules('required');
             $form->tineditor('claim','岗位要求')->rules('required');
             $form->display('created_at', '添加时间');

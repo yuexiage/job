@@ -13,20 +13,6 @@
 @section('footer', $footer)
 @section('content')
     <link href="{{ asset('css/swiper.min.css?v=') }}{{time()}}" rel="stylesheet">
-    {{--header--}}
-    <div class="layui-header header header-index tm-top-bar" summer="">
-        <div class="layui-main">
-            <a class="logo" href="/">
-                <img src="//res.layui.com/static/images/layui/logo.png" alt="layui">
-            </a>
-            <ul class="layui-nav" lay-filter="">
-                <li class="layui-nav-item  layui-this"><a href="">首页</a></li>
-                <li class="layui-nav-item"><a href="">全职招聘</a></li>
-                <li class="layui-nav-item"><a href="">兼职招聘</a></li>
-                <li class="layui-nav-item"><a href="">关于我们</a></li>
-            </ul>
-        </div>
-    </div>
     {{--slide--}}
     <div class="site-banner">
         <div class="tm-section tm-bg-img" id="tm-section-1">
@@ -59,7 +45,7 @@
                     <div class="position_list">
                         <ul>
                             @foreach($newposition as $row)
-                                <li>[{{isset($row->cityName->name)?$row->cityName->name:''}}] {{$row->title}}</li>
+                                <li><a href="{{url('/position/id/'.$row->id)}}">[{{isset($row->cityName->name)?$row->cityName->name:''}}] {{$row->title}}</a></li>
                             @endforeach
                         </ul>
                     </div>
@@ -67,14 +53,24 @@
                 <article class="col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-article">
                     <i class="fa tm-fa-6x fa-plane tm-color-primary tm-margin-b-20"></i>
                     <h3 class="tm-color-primary tm-article-title-1">热门</h3>
-                    <p>Pellentesque at velit ante. Duis scelerisque metus vel felis porttitor gravida. Donec at felis libero. Mauris odio tortor.</p>
-                    <a href="#" class="text-uppercase tm-color-primary tm-font-semibold">Continue reading...</a>
+                    <div class="position_list">
+                        <ul>
+                            @foreach($hotposition as $row)
+                                <li><a href="{{url('/position/id/'.$row->id)}}">[{{isset($row->cityName->name)?$row->cityName->name:''}}] {{$row->title}}</a></li>
+                            @endforeach
+                        </ul>
+                    </div>
                 </article>
                 <article class="col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-article">
                     <i class="fa tm-fa-6x fa-life-saver tm-color-primary tm-margin-b-20"></i>
                     <h3 class="tm-color-primary tm-article-title-1">急聘</h3>
-                    <p>Pellentesque at velit ante. Duis scelerisque metus vel felis porttitor gravida. Donec at felis libero. Mauris odio tortor.</p>
-                    <a href="#" class="text-uppercase tm-color-primary tm-font-semibold">Continue reading...</a>
+                    <div class="position_list">
+                        <ul>
+                            @foreach($expeditedposition as $row)
+                                <li><a href="{{url('/position/id/'.$row->id)}}">[{{isset($row->cityName->name)?$row->cityName->name:''}}] {{$row->title}}</a></li>
+                            @endforeach
+                        </ul>
+                    </div>
                 </article>
             </div>
         </div>

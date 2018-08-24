@@ -220,3 +220,106 @@ footer*/
 .position_list{
     text-align: left;
 }
+.position_list a:hover{
+    text-decoration: none;
+    color: #ee5057;
+}
+
+/*
+职位详情页*/
+.position_main{
+    background-color: #f4f4f4;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+.position_panel{
+    margin-top: 75px;
+}
+.w1200 .w680 {
+    width: 850px;
+}
+
+.fl {
+    float: left;
+}
+.bg {
+    background-color: #fff;
+    box-shadow: 2px 2px 2px #e9e9e9;
+}
+.w1200 .w280 {
+    width: 320px;
+}
+.fr {
+    float: right;
+}
+.w1200{
+    overflow: hidden;
+    width: 1200px;
+    margin: 75px auto 20px auto;
+}
+.mt30 {
+    margin-top: 30px;
+}
+.f28 {
+    font-size: 28px;
+}
+.c333 {
+    color: #333;
+}
+.p20 {
+    padding: 20px;
+}
+.mr20 {
+    margin-right: 20px;
+}
+.mt30 {
+    margin-top: 30px;
+}
+.bgc_f4 {
+    background-color: #f4f4f4;
+}
+.lh24 {
+    line-height: 24px;
+}
+.overhidden {
+    overflow: hidden;
+}
+.c999 {
+    color: #999;
+}
+.wp33-3 {
+    width: 33.3%;
+}
+.c333 {
+    color: #333;
+}
+/*
+面包屑*/
+.bp1 {
+    background-position: left 2px;
+}
+.pl20 {
+    padding-left: 20px;
+}
+.ml20 {
+    margin-left: 20px;
+}
+.mt20 {
+    margin-top: 20px;
+}
+.f12 {
+    font-size: 12px;
+}
+.c999 {
+    color: #999;
+}
+.ml3 {
+    margin-left: 3px;
+}
+.f12 {
+    font-size: 12px;
+}
+.breadcrumb{
+    font-size: 14px !important;
+    background-color: #ffffff;
+}

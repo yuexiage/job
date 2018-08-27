@@ -42,7 +42,7 @@
             @endif
             "><a href="/">首页</a></li>
             @foreach($job_type as $key=> $row)
-            <li class="layui-nav-item {{$menu==$key?'layui-this':''}}" ><a href="">{{$row}}</a></li>
+            <li class="layui-nav-item {{$menu==$key?'layui-this':''}}" ><a href="{{url('/position_list/'.$key )}}">{{$row}}</a></li>
             @endforeach
             <li class="layui-nav-item"><a href="">关于我们</a></li>
         </ul>

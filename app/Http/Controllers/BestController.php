@@ -38,6 +38,10 @@ class BestController extends Controller
                     $type = PositionModel::where('id',$id)->value('type');
                     return $type;
                     break;
+                case 'position_list':
+                    $type = request()->type;
+                    return $type;
+                    break;
                 default:
                     return '';
             }

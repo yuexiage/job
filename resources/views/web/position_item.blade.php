@@ -15,34 +15,66 @@
                 </div>
                 <div class="mt30 ml20 mr20 p20 bgc_f4">
                     <ul class="c999 overhidden lh24">
-                        <li class="fl wp33-3">工作地点：<span class="c333">
-									<span title="{{isset($position->cityName->name)?$position->cityName->name:''}}"> {{isset($position->cityName->name)?$position->cityName->name:''}}</span>
-									 </span></li>
-
-                        <li class="fl wp33-3">工作经验：<span class="c333"><font title="{{isset($position->experienceName->name)?$position->experienceName->name:''}}">{{isset($position->experienceName->name)?$position->experienceName->name:''}}</font></span></li>
-
-                        <li class="fl wp33-3"><span class="mr28"><span>学　　历：</span><span class="c333"><font title="{{isset($position->educationName->name)?$position->educationName->name:''}}">{{isset($position->educationName->name)?$position->educationName->name:''}}</font></span></span></li>
+                        <li class="fl wp33-3">
+                            工作地点：
+                            <span class="c333">
+							    <span title="{{isset($position->cityName->name)?$position->cityName->name:''}}">
+                                    {{isset($position->cityName->name)?$position->cityName->name:''}}</span>
+								</span>
+                        </li>
+                        <li class="fl wp33-3">工作经验：
+                            <span class="c333">
+                                <font title="{{isset($position->experienceName->name)?$position->experienceName->name:''}}">
+                                {{isset($position->experienceName->name)?$position->experienceName->name:''}}
+                                </font>
+                            </span>
+                        </li>
+                        <li class="fl wp33-3">
+                            <span class="mr28">
+                                <span>学　　历：</span>
+                                <span class="c333">
+                                    <font title="{{isset($position->educationName->name)?$position->educationName->name:''}}">
+                                        {{isset($position->educationName->name)?$position->educationName->name:''}}
+                                    </font>
+                                </span>
+                            </span>
+                        </li>
                     </ul>
-
                     <ul class="c999 overhidden lh24">
-
-
-                        <li class="fl wp33-3">工作类型：<span class="c333"><font title="{$job_type[$menu]}}" initialletter="Q">{$job_type[$menu]}}</font>
-
-									  </span></li>
-                        <li class="fl wp33-3">招聘人数：<span class="c333">
-                                @if(isset($position->num==0))
+                        <li class="fl wp33-3">工作类型：
+                            <span class="c333">
+                                <font title="{{$job_type[$menu]}}" initialletter="Q">
+                                    {{$job_type[$menu]}}
+                                </font>
+								</span>
+                        </li>
+                        <li class="fl wp33-3">招聘人数：
+                            <span class="c333">
+                                @if($position->num==0)
                                     若干
                                     @else
                                     {{$position->num}}人
                                 @endif
-								   </span></li>
-                        <li class="fl wp33-3">发布时间：<span class="c333">{{$position->created_at}}</span></li>
-
-
+							</span>
+                        </li>
+                        <li class="fl wp33-3">发布时间：
+                            <span class="c333">{{$position->created_at}}</span>
+                        </li>
                     </ul>
                 </div>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                <div class="mt25 ml20 mr20">
+                    <div class="f18 c333 mb15">职位描述</div>
+                   {!! $position->description !!}
+                    <div class="f18 c333 mb15 mt20">任职要求</div>
+                    {!! $position->claim !!}
+
+                    <div class="overhidden mt40 wp90 m0 mb50 ml100" style="margin-top:50px;">
+                        <button class="layui-btn layui-col-md2 layui-col-md-offset5">
+                            <i class="layui-icon">&#xe609;</i> 投递此职位
+                        </button>
+                    </div>
+                </div>
             </div>
             <div class="w280 fr mb20">
                 <div class="w280 bg pt20">

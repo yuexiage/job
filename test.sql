@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2018-07-27 17:48:58
+Date: 2018-08-27 11:46:50
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -67,7 +67,7 @@ CREATE TABLE `admin_operation_log` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `admin_operation_log_user_id_index` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1682 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1834 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of admin_operation_log
@@ -1753,6 +1753,158 @@ INSERT INTO `admin_operation_log` VALUES ('1678', '1', 'admin/slide', 'GET', '12
 INSERT INTO `admin_operation_log` VALUES ('1679', '1', 'admin/slide', 'GET', '127.0.0.1', '[]', '2018-07-18 14:32:05', '2018-07-18 14:32:05');
 INSERT INTO `admin_operation_log` VALUES ('1680', '1', 'admin/slide/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-07-18 14:32:07', '2018-07-18 14:32:07');
 INSERT INTO `admin_operation_log` VALUES ('1681', '1', 'admin/slide/1/edit', 'GET', '127.0.0.1', '[]', '2018-07-18 14:32:28', '2018-07-18 14:32:28');
+INSERT INTO `admin_operation_log` VALUES ('1682', '3', 'admin', 'GET', '127.0.0.1', '[]', '2018-08-22 10:05:55', '2018-08-22 10:05:55');
+INSERT INTO `admin_operation_log` VALUES ('1683', '3', 'admin/auth/logout', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 10:06:01', '2018-08-22 10:06:01');
+INSERT INTO `admin_operation_log` VALUES ('1684', '1', 'admin', 'GET', '127.0.0.1', '[]', '2018-08-22 10:06:07', '2018-08-22 10:06:07');
+INSERT INTO `admin_operation_log` VALUES ('1685', '1', 'admin/slide', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 10:06:13', '2018-08-22 10:06:13');
+INSERT INTO `admin_operation_log` VALUES ('1686', '1', 'admin/slide/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 10:06:17', '2018-08-22 10:06:17');
+INSERT INTO `admin_operation_log` VALUES ('1687', '1', 'admin/auth/setting', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 10:06:29', '2018-08-22 10:06:29');
+INSERT INTO `admin_operation_log` VALUES ('1688', '1', 'admin/auth/setting', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 10:06:34', '2018-08-22 10:06:34');
+INSERT INTO `admin_operation_log` VALUES ('1689', '1', 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 10:06:36', '2018-08-22 10:06:36');
+INSERT INTO `admin_operation_log` VALUES ('1690', '1', 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 10:06:38', '2018-08-22 10:06:38');
+INSERT INTO `admin_operation_log` VALUES ('1691', '1', 'admin/setting', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 10:06:47', '2018-08-22 10:06:47');
+INSERT INTO `admin_operation_log` VALUES ('1692', '1', 'admin/setting/14/edit', 'GET', '127.0.0.1', '[]', '2018-08-22 10:06:47', '2018-08-22 10:06:47');
+INSERT INTO `admin_operation_log` VALUES ('1693', '1', 'admin/setting/14', 'PUT', '127.0.0.1', '{\"field\":{\"site_name\":\"\\u62db\\u8058\\u7f51\\u7ad9\",\"keywords\":\"php,java,python\",\"description\":\"\\u8fd9\\u662f\\u4e00\\u4e2a\\u62db\\u8058\\u7f51\\u7ad9\",\"footer\":\"\\u53ef\\u4ee5\\u6dfb\\u52a0\\u7248\\u6743\\u4fe1\\u606f\"},\"setting\":\"a:4:{s:9:\\\"site_name\\\";s:12:\\\"\\u62db\\u8058\\u7f51\\u7ad9\\\";s:8:\\\"keywords\\\";s:15:\\\"php,java,python\\\";s:11:\\\"description\\\";s:24:\\\"\\u8fd9\\u662f\\u4e00\\u4e2a\\u62db\\u8058\\u7f51\\u7ad9\\\";s:6:\\\"footer\\\";s:24:\\\"\\u53ef\\u4ee5\\u6dfb\\u52a0\\u7248\\u6743\\u4fe1\\u606f\\\";}\",\"_token\":\"tZfTHPzybDgZODU0ArLubY5b1SuO8c0BmWvtjcPL\",\"_method\":\"PUT\"}', '2018-08-22 10:07:03', '2018-08-22 10:07:03');
+INSERT INTO `admin_operation_log` VALUES ('1694', '1', 'admin/setting', 'GET', '127.0.0.1', '[]', '2018-08-22 10:07:04', '2018-08-22 10:07:04');
+INSERT INTO `admin_operation_log` VALUES ('1695', '1', 'admin/setting/14/edit', 'GET', '127.0.0.1', '[]', '2018-08-22 10:07:04', '2018-08-22 10:07:04');
+INSERT INTO `admin_operation_log` VALUES ('1696', '1', 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 10:07:10', '2018-08-22 10:07:10');
+INSERT INTO `admin_operation_log` VALUES ('1697', '1', 'admin/auth/menu/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 10:07:15', '2018-08-22 10:07:15');
+INSERT INTO `admin_operation_log` VALUES ('1698', '1', 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 10:07:28', '2018-08-22 10:07:28');
+INSERT INTO `admin_operation_log` VALUES ('1699', '1', 'admin/setting', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 10:08:19', '2018-08-22 10:08:19');
+INSERT INTO `admin_operation_log` VALUES ('1700', '1', 'admin/setting/14/edit', 'GET', '127.0.0.1', '[]', '2018-08-22 10:08:19', '2018-08-22 10:08:19');
+INSERT INTO `admin_operation_log` VALUES ('1701', '1', 'admin/slide', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 11:17:27', '2018-08-22 11:17:27');
+INSERT INTO `admin_operation_log` VALUES ('1702', '1', 'admin/slide/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 11:17:31', '2018-08-22 11:17:31');
+INSERT INTO `admin_operation_log` VALUES ('1703', '1', 'admin/slide/1', 'PUT', '127.0.0.1', '{\"title\":\"11111\",\"href\":\"http:\\/\\/t.com\\/admin\\/slide\\/create\",\"_token\":\"tZfTHPzybDgZODU0ArLubY5b1SuO8c0BmWvtjcPL\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/t.com\\/admin\\/slide\"}', '2018-08-22 11:43:19', '2018-08-22 11:43:19');
+INSERT INTO `admin_operation_log` VALUES ('1704', '1', 'admin/slide', 'GET', '127.0.0.1', '[]', '2018-08-22 11:43:20', '2018-08-22 11:43:20');
+INSERT INTO `admin_operation_log` VALUES ('1705', '1', 'admin/slide/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 11:43:24', '2018-08-22 11:43:24');
+INSERT INTO `admin_operation_log` VALUES ('1706', '1', 'admin/slide', 'POST', '127.0.0.1', '{\"title\":\"2222222222\",\"href\":null,\"_token\":\"tZfTHPzybDgZODU0ArLubY5b1SuO8c0BmWvtjcPL\",\"_previous_\":\"http:\\/\\/t.com\\/admin\\/slide\"}', '2018-08-22 11:43:44', '2018-08-22 11:43:44');
+INSERT INTO `admin_operation_log` VALUES ('1707', '1', 'admin/slide/create', 'GET', '127.0.0.1', '[]', '2018-08-22 11:43:45', '2018-08-22 11:43:45');
+INSERT INTO `admin_operation_log` VALUES ('1708', '1', 'admin/slide', 'POST', '127.0.0.1', '{\"title\":\"2222222222\",\"href\":null,\"_token\":\"tZfTHPzybDgZODU0ArLubY5b1SuO8c0BmWvtjcPL\"}', '2018-08-22 11:45:15', '2018-08-22 11:45:15');
+INSERT INTO `admin_operation_log` VALUES ('1709', '1', 'admin/slide/create', 'GET', '127.0.0.1', '[]', '2018-08-22 11:45:15', '2018-08-22 11:45:15');
+INSERT INTO `admin_operation_log` VALUES ('1710', '1', 'admin/slide/create', 'GET', '127.0.0.1', '[]', '2018-08-22 11:45:22', '2018-08-22 11:45:22');
+INSERT INTO `admin_operation_log` VALUES ('1711', '1', 'admin/slide', 'POST', '127.0.0.1', '{\"title\":\"22222\",\"href\":null,\"_token\":\"tZfTHPzybDgZODU0ArLubY5b1SuO8c0BmWvtjcPL\"}', '2018-08-22 11:45:57', '2018-08-22 11:45:57');
+INSERT INTO `admin_operation_log` VALUES ('1712', '1', 'admin/slide/create', 'GET', '127.0.0.1', '[]', '2018-08-22 11:45:57', '2018-08-22 11:45:57');
+INSERT INTO `admin_operation_log` VALUES ('1713', '1', 'admin/slide/create', 'GET', '127.0.0.1', '[]', '2018-08-22 11:46:56', '2018-08-22 11:46:56');
+INSERT INTO `admin_operation_log` VALUES ('1714', '1', 'admin/slide', 'POST', '127.0.0.1', '{\"title\":\"222222\",\"href\":null,\"_token\":\"tZfTHPzybDgZODU0ArLubY5b1SuO8c0BmWvtjcPL\"}', '2018-08-22 11:47:01', '2018-08-22 11:47:01');
+INSERT INTO `admin_operation_log` VALUES ('1715', '1', 'admin/slide/create', 'GET', '127.0.0.1', '[]', '2018-08-22 11:47:02', '2018-08-22 11:47:02');
+INSERT INTO `admin_operation_log` VALUES ('1716', '1', 'admin/slide/create', 'GET', '127.0.0.1', '[]', '2018-08-22 11:47:13', '2018-08-22 11:47:13');
+INSERT INTO `admin_operation_log` VALUES ('1717', '1', 'admin/slide', 'POST', '127.0.0.1', '{\"title\":\"2222222\",\"href\":\"http:\\/\\/t.com\\/admin\\/slide\\/create\",\"_token\":\"tZfTHPzybDgZODU0ArLubY5b1SuO8c0BmWvtjcPL\"}', '2018-08-22 11:47:43', '2018-08-22 11:47:43');
+INSERT INTO `admin_operation_log` VALUES ('1718', '1', 'admin/slide', 'GET', '127.0.0.1', '[]', '2018-08-22 11:47:44', '2018-08-22 11:47:44');
+INSERT INTO `admin_operation_log` VALUES ('1719', '1', 'admin/slide/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 11:48:27', '2018-08-22 11:48:27');
+INSERT INTO `admin_operation_log` VALUES ('1720', '1', 'admin/slide', 'POST', '127.0.0.1', '{\"title\":null,\"href\":null,\"_token\":\"tZfTHPzybDgZODU0ArLubY5b1SuO8c0BmWvtjcPL\",\"_previous_\":\"http:\\/\\/t.com\\/admin\\/slide\"}', '2018-08-22 11:48:28', '2018-08-22 11:48:28');
+INSERT INTO `admin_operation_log` VALUES ('1721', '1', 'admin/slide/create', 'GET', '127.0.0.1', '[]', '2018-08-22 11:48:28', '2018-08-22 11:48:28');
+INSERT INTO `admin_operation_log` VALUES ('1722', '1', 'admin/slide/create', 'GET', '127.0.0.1', '[]', '2018-08-22 11:48:44', '2018-08-22 11:48:44');
+INSERT INTO `admin_operation_log` VALUES ('1723', '1', 'admin/slide', 'POST', '127.0.0.1', '{\"title\":null,\"href\":null,\"_token\":\"tZfTHPzybDgZODU0ArLubY5b1SuO8c0BmWvtjcPL\"}', '2018-08-22 11:48:47', '2018-08-22 11:48:47');
+INSERT INTO `admin_operation_log` VALUES ('1724', '1', 'admin/slide/create', 'GET', '127.0.0.1', '[]', '2018-08-22 11:48:47', '2018-08-22 11:48:47');
+INSERT INTO `admin_operation_log` VALUES ('1725', '1', 'admin/slide/create', 'GET', '127.0.0.1', '[]', '2018-08-22 11:50:18', '2018-08-22 11:50:18');
+INSERT INTO `admin_operation_log` VALUES ('1726', '1', 'admin/slide/create', 'GET', '127.0.0.1', '[]', '2018-08-22 11:50:18', '2018-08-22 11:50:18');
+INSERT INTO `admin_operation_log` VALUES ('1727', '1', 'admin/slide/create', 'GET', '127.0.0.1', '[]', '2018-08-22 11:50:56', '2018-08-22 11:50:56');
+INSERT INTO `admin_operation_log` VALUES ('1728', '1', 'admin/position_type', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 11:59:17', '2018-08-22 11:59:17');
+INSERT INTO `admin_operation_log` VALUES ('1729', '1', 'admin/position_type/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 11:59:22', '2018-08-22 11:59:22');
+INSERT INTO `admin_operation_log` VALUES ('1730', '1', 'admin/position_type/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-22 11:59:30', '2018-08-22 11:59:30');
+INSERT INTO `admin_operation_log` VALUES ('1731', '1', 'admin/education', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 11:59:34', '2018-08-22 11:59:34');
+INSERT INTO `admin_operation_log` VALUES ('1732', '1', 'admin/position', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 11:59:38', '2018-08-22 11:59:38');
+INSERT INTO `admin_operation_log` VALUES ('1733', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 11:59:46', '2018-08-22 11:59:46');
+INSERT INTO `admin_operation_log` VALUES ('1734', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-22 12:00:28', '2018-08-22 12:00:28');
+INSERT INTO `admin_operation_log` VALUES ('1735', '1', 'admin/departme', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 12:00:57', '2018-08-22 12:00:57');
+INSERT INTO `admin_operation_log` VALUES ('1736', '1', 'admin/position', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 12:01:02', '2018-08-22 12:01:02');
+INSERT INTO `admin_operation_log` VALUES ('1737', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 12:01:09', '2018-08-22 12:01:09');
+INSERT INTO `admin_operation_log` VALUES ('1738', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-22 12:03:48', '2018-08-22 12:03:48');
+INSERT INTO `admin_operation_log` VALUES ('1739', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-22 12:04:05', '2018-08-22 12:04:05');
+INSERT INTO `admin_operation_log` VALUES ('1740', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-22 12:04:15', '2018-08-22 12:04:15');
+INSERT INTO `admin_operation_log` VALUES ('1741', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-22 12:04:26', '2018-08-22 12:04:26');
+INSERT INTO `admin_operation_log` VALUES ('1742', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-22 12:04:43', '2018-08-22 12:04:43');
+INSERT INTO `admin_operation_log` VALUES ('1743', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-22 12:06:08', '2018-08-22 12:06:08');
+INSERT INTO `admin_operation_log` VALUES ('1744', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-22 12:06:37', '2018-08-22 12:06:37');
+INSERT INTO `admin_operation_log` VALUES ('1745', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-22 12:07:00', '2018-08-22 12:07:00');
+INSERT INTO `admin_operation_log` VALUES ('1746', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-22 12:07:14', '2018-08-22 12:07:14');
+INSERT INTO `admin_operation_log` VALUES ('1747', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-22 12:07:29', '2018-08-22 12:07:29');
+INSERT INTO `admin_operation_log` VALUES ('1748', '1', 'admin/position', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 12:07:39', '2018-08-22 12:07:39');
+INSERT INTO `admin_operation_log` VALUES ('1749', '1', 'admin/position/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 12:07:41', '2018-08-22 12:07:41');
+INSERT INTO `admin_operation_log` VALUES ('1750', '1', 'admin/position', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 12:08:33', '2018-08-22 12:08:33');
+INSERT INTO `admin_operation_log` VALUES ('1751', '1', 'admin/auth/roles', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 12:08:43', '2018-08-22 12:08:43');
+INSERT INTO `admin_operation_log` VALUES ('1752', '1', 'admin/auth/permissions', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 12:08:53', '2018-08-22 12:08:53');
+INSERT INTO `admin_operation_log` VALUES ('1753', '1', 'admin/position', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 12:10:47', '2018-08-22 12:10:47');
+INSERT INTO `admin_operation_log` VALUES ('1754', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 12:10:49', '2018-08-22 12:10:49');
+INSERT INTO `admin_operation_log` VALUES ('1755', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-22 12:10:49', '2018-08-22 12:10:49');
+INSERT INTO `admin_operation_log` VALUES ('1756', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-22 12:11:02', '2018-08-22 12:11:02');
+INSERT INTO `admin_operation_log` VALUES ('1757', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 12:11:04', '2018-08-22 12:11:04');
+INSERT INTO `admin_operation_log` VALUES ('1758', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-22 12:11:05', '2018-08-22 12:11:05');
+INSERT INTO `admin_operation_log` VALUES ('1759', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-22 12:11:19', '2018-08-22 12:11:19');
+INSERT INTO `admin_operation_log` VALUES ('1760', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 12:11:21', '2018-08-22 12:11:21');
+INSERT INTO `admin_operation_log` VALUES ('1761', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-22 12:11:22', '2018-08-22 12:11:22');
+INSERT INTO `admin_operation_log` VALUES ('1762', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-22 12:12:31', '2018-08-22 12:12:31');
+INSERT INTO `admin_operation_log` VALUES ('1763', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 12:12:33', '2018-08-22 12:12:33');
+INSERT INTO `admin_operation_log` VALUES ('1764', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-22 12:12:42', '2018-08-22 12:12:42');
+INSERT INTO `admin_operation_log` VALUES ('1765', '1', 'admin/position', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-22 12:12:50', '2018-08-22 12:12:50');
+INSERT INTO `admin_operation_log` VALUES ('1766', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-22 12:14:00', '2018-08-22 12:14:00');
+INSERT INTO `admin_operation_log` VALUES ('1767', '3', 'admin', 'GET', '127.0.0.1', '[]', '2018-08-23 09:46:19', '2018-08-23 09:46:19');
+INSERT INTO `admin_operation_log` VALUES ('1768', '3', 'admin/position', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-23 09:46:50', '2018-08-23 09:46:50');
+INSERT INTO `admin_operation_log` VALUES ('1769', '3', 'admin/position/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-23 09:46:58', '2018-08-23 09:46:58');
+INSERT INTO `admin_operation_log` VALUES ('1770', '3', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-23 09:46:59', '2018-08-23 09:46:59');
+INSERT INTO `admin_operation_log` VALUES ('1771', '3', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-23 09:48:47', '2018-08-23 09:48:47');
+INSERT INTO `admin_operation_log` VALUES ('1772', '3', 'admin/position/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-23 09:48:52', '2018-08-23 09:48:52');
+INSERT INTO `admin_operation_log` VALUES ('1773', '3', 'admin/position/2/edit', 'GET', '127.0.0.1', '[]', '2018-08-23 09:49:22', '2018-08-23 09:49:22');
+INSERT INTO `admin_operation_log` VALUES ('1774', '3', 'admin/position/2/edit', 'GET', '127.0.0.1', '[]', '2018-08-23 09:50:38', '2018-08-23 09:50:38');
+INSERT INTO `admin_operation_log` VALUES ('1775', '3', 'admin/position', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-23 09:50:44', '2018-08-23 09:50:44');
+INSERT INTO `admin_operation_log` VALUES ('1776', '3', 'admin/auth/logout', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-23 09:50:47', '2018-08-23 09:50:47');
+INSERT INTO `admin_operation_log` VALUES ('1777', '1', 'admin', 'GET', '127.0.0.1', '[]', '2018-08-23 09:50:53', '2018-08-23 09:50:53');
+INSERT INTO `admin_operation_log` VALUES ('1778', '1', 'admin/departme', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-23 09:50:56', '2018-08-23 09:50:56');
+INSERT INTO `admin_operation_log` VALUES ('1779', '1', 'admin', 'GET', '127.0.0.1', '[]', '2018-08-23 09:51:01', '2018-08-23 09:51:01');
+INSERT INTO `admin_operation_log` VALUES ('1780', '1', 'admin/departme/3/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-23 09:55:08', '2018-08-23 09:55:08');
+INSERT INTO `admin_operation_log` VALUES ('1781', '1', 'admin/position', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-23 09:55:12', '2018-08-23 09:55:12');
+INSERT INTO `admin_operation_log` VALUES ('1782', '1', 'admin/position/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-23 09:55:14', '2018-08-23 09:55:14');
+INSERT INTO `admin_operation_log` VALUES ('1783', '1', 'admin/position', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-23 09:55:21', '2018-08-23 09:55:21');
+INSERT INTO `admin_operation_log` VALUES ('1784', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-23 10:31:14', '2018-08-23 10:31:14');
+INSERT INTO `admin_operation_log` VALUES ('1785', '1', 'admin', 'GET', '127.0.0.1', '[]', '2018-08-24 10:22:18', '2018-08-24 10:22:18');
+INSERT INTO `admin_operation_log` VALUES ('1786', '1', 'admin/position', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-24 10:41:17', '2018-08-24 10:41:17');
+INSERT INTO `admin_operation_log` VALUES ('1787', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-24 10:41:22', '2018-08-24 10:41:22');
+INSERT INTO `admin_operation_log` VALUES ('1788', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-24 10:44:21', '2018-08-24 10:44:21');
+INSERT INTO `admin_operation_log` VALUES ('1789', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-24 10:47:32', '2018-08-24 10:47:32');
+INSERT INTO `admin_operation_log` VALUES ('1790', '1', 'admin/position/1', 'PUT', '127.0.0.1', '{\"title\":\"PHP\\u5de5\\u7a0b\\u5e08\",\"experience\":\"1\",\"education\":\"1\",\"city\":\"2\",\"type\":\"1\",\"departme\":\"4\",\"position_type\":\"1\",\"num\":\"3\",\"publish\":\"on\",\"expedited\":\"off\",\"description\":\"<p>111111111111<\\/p>\",\"claim\":\"<p>22222222222<\\/p>\",\"_token\":\"jqN0bQaJ2JhkC0aH0T219I3xBPqlyCq8YBRbtHqk\",\"_method\":\"PUT\"}', '2018-08-24 10:47:42', '2018-08-24 10:47:42');
+INSERT INTO `admin_operation_log` VALUES ('1791', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-24 10:47:42', '2018-08-24 10:47:42');
+INSERT INTO `admin_operation_log` VALUES ('1792', '1', 'admin/position/1', 'PUT', '127.0.0.1', '{\"expedited\":\"on\",\"_token\":\"jqN0bQaJ2JhkC0aH0T219I3xBPqlyCq8YBRbtHqk\",\"_method\":\"PUT\"}', '2018-08-24 10:47:47', '2018-08-24 10:47:47');
+INSERT INTO `admin_operation_log` VALUES ('1793', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-24 10:47:48', '2018-08-24 10:47:48');
+INSERT INTO `admin_operation_log` VALUES ('1794', '1', 'admin/position/1', 'PUT', '127.0.0.1', '{\"expedited\":\"off\",\"_token\":\"jqN0bQaJ2JhkC0aH0T219I3xBPqlyCq8YBRbtHqk\",\"_method\":\"PUT\"}', '2018-08-24 10:48:12', '2018-08-24 10:48:12');
+INSERT INTO `admin_operation_log` VALUES ('1795', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-24 10:48:14', '2018-08-24 10:48:14');
+INSERT INTO `admin_operation_log` VALUES ('1796', '1', 'admin/position/1', 'PUT', '127.0.0.1', '{\"expedited\":\"on\",\"_token\":\"jqN0bQaJ2JhkC0aH0T219I3xBPqlyCq8YBRbtHqk\",\"_method\":\"PUT\"}', '2018-08-24 10:48:34', '2018-08-24 10:48:34');
+INSERT INTO `admin_operation_log` VALUES ('1797', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-24 10:48:37', '2018-08-24 10:48:37');
+INSERT INTO `admin_operation_log` VALUES ('1798', '1', 'admin/position/1', 'PUT', '127.0.0.1', '{\"expedited\":\"off\",\"_token\":\"jqN0bQaJ2JhkC0aH0T219I3xBPqlyCq8YBRbtHqk\",\"_method\":\"PUT\"}', '2018-08-24 10:48:40', '2018-08-24 10:48:40');
+INSERT INTO `admin_operation_log` VALUES ('1799', '1', 'admin/position/1', 'PUT', '127.0.0.1', '{\"expedited\":\"on\",\"_token\":\"jqN0bQaJ2JhkC0aH0T219I3xBPqlyCq8YBRbtHqk\",\"_method\":\"PUT\"}', '2018-08-24 10:48:41', '2018-08-24 10:48:41');
+INSERT INTO `admin_operation_log` VALUES ('1800', '1', 'admin/position/1', 'PUT', '127.0.0.1', '{\"publish\":\"off\",\"_token\":\"jqN0bQaJ2JhkC0aH0T219I3xBPqlyCq8YBRbtHqk\",\"_method\":\"PUT\"}', '2018-08-24 10:48:42', '2018-08-24 10:48:42');
+INSERT INTO `admin_operation_log` VALUES ('1801', '1', 'admin/position/1', 'PUT', '127.0.0.1', '{\"publish\":\"on\",\"_token\":\"jqN0bQaJ2JhkC0aH0T219I3xBPqlyCq8YBRbtHqk\",\"_method\":\"PUT\"}', '2018-08-24 10:48:49', '2018-08-24 10:48:49');
+INSERT INTO `admin_operation_log` VALUES ('1802', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-24 10:48:50', '2018-08-24 10:48:50');
+INSERT INTO `admin_operation_log` VALUES ('1803', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-24 10:52:06', '2018-08-24 10:52:06');
+INSERT INTO `admin_operation_log` VALUES ('1804', '1', 'admin/position_type', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-24 13:10:30', '2018-08-24 13:10:30');
+INSERT INTO `admin_operation_log` VALUES ('1805', '1', 'admin/position_type/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-24 13:48:50', '2018-08-24 13:48:50');
+INSERT INTO `admin_operation_log` VALUES ('1806', '1', 'admin/position', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-24 13:49:09', '2018-08-24 13:49:09');
+INSERT INTO `admin_operation_log` VALUES ('1807', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-24 13:49:11', '2018-08-24 13:49:11');
+INSERT INTO `admin_operation_log` VALUES ('1808', '1', 'admin/position', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-24 13:49:16', '2018-08-24 13:49:16');
+INSERT INTO `admin_operation_log` VALUES ('1809', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-24 13:54:24', '2018-08-24 13:54:24');
+INSERT INTO `admin_operation_log` VALUES ('1810', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-24 13:54:28', '2018-08-24 13:54:28');
+INSERT INTO `admin_operation_log` VALUES ('1811', '1', 'admin/position', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-24 13:54:36', '2018-08-24 13:54:36');
+INSERT INTO `admin_operation_log` VALUES ('1812', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-24 15:35:27', '2018-08-24 15:35:27');
+INSERT INTO `admin_operation_log` VALUES ('1813', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-24 15:36:14', '2018-08-24 15:36:14');
+INSERT INTO `admin_operation_log` VALUES ('1814', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '[]', '2018-08-24 15:38:31', '2018-08-24 15:38:31');
+INSERT INTO `admin_operation_log` VALUES ('1815', '1', 'admin/position/1', 'PUT', '127.0.0.1', '{\"title\":\"PHP\\u5de5\\u7a0b\\u5e08\",\"experience\":\"1\",\"education\":\"1\",\"city\":\"2\",\"type\":\"1\",\"departme\":\"4\",\"position_type\":\"1\",\"num\":\"0\",\"publish\":\"on\",\"expedited\":\"on\",\"description\":\"<p>111111111111<\\/p>\",\"claim\":\"<p>22222222222<\\/p>\",\"_token\":\"jqN0bQaJ2JhkC0aH0T219I3xBPqlyCq8YBRbtHqk\",\"_method\":\"PUT\"}', '2018-08-24 15:38:43', '2018-08-24 15:38:43');
+INSERT INTO `admin_operation_log` VALUES ('1816', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-24 15:38:44', '2018-08-24 15:38:44');
+INSERT INTO `admin_operation_log` VALUES ('1817', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-24 15:40:17', '2018-08-24 15:40:17');
+INSERT INTO `admin_operation_log` VALUES ('1818', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-24 15:40:35', '2018-08-24 15:40:35');
+INSERT INTO `admin_operation_log` VALUES ('1819', '1', 'admin', 'GET', '127.0.0.1', '[]', '2018-08-27 09:54:42', '2018-08-27 09:54:42');
+INSERT INTO `admin_operation_log` VALUES ('1820', '1', 'admin/position', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-27 10:10:07', '2018-08-27 10:10:07');
+INSERT INTO `admin_operation_log` VALUES ('1821', '1', 'admin/position/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-27 10:10:09', '2018-08-27 10:10:09');
+INSERT INTO `admin_operation_log` VALUES ('1822', '1', 'admin/position', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-27 10:13:22', '2018-08-27 10:13:22');
+INSERT INTO `admin_operation_log` VALUES ('1823', '1', 'admin/position/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-27 10:13:24', '2018-08-27 10:13:24');
+INSERT INTO `admin_operation_log` VALUES ('1824', '1', 'admin/position/2/edit', 'GET', '127.0.0.1', '[]', '2018-08-27 10:13:28', '2018-08-27 10:13:28');
+INSERT INTO `admin_operation_log` VALUES ('1825', '1', 'admin/position/2', 'PUT', '127.0.0.1', '{\"title\":\"IOS\\u9ad8\\u7ea7\\u5de5\\u7a0b\\u5e08\",\"experience\":\"3\",\"education\":\"2\",\"city\":\"1\",\"type\":\"2\",\"departme\":\"3\",\"position_type\":\"3\",\"num\":\"8\",\"publish\":\"on\",\"expedited\":\"on\",\"description\":\"<pre>1\\u3001\\u8d1f\\u8d23\\u57f9\\u8bad\\u90e8\\u89c6\\u9891\\u7684\\u540e\\u671f\\u526a\\u8f91\\u5de5\\u4f5c\\uff1b<br \\/>2\\u3001\\u72ec\\u7acb\\u5b8c\\u6210\\u57fa\\u672c\\u7684\\u97f3\\u89c6\\u9891\\u540e\\u671f\\u526a\\u8f91\\u5236\\u4f5c\\uff0c\\u5e76\\u534f\\u540c\\u5176\\u5b83\\u90e8\\u95e8\\u8f93\\u51fa\\u6700\\u7ec8\\u6210\\u7247\\uff1b<br \\/>3\\u3001\\u6b63\\u786e\\u719f\\u7ec3\\u5730\\u4f7f\\u7528\\u538b\\u7f29\\u526a\\u8f91\\u8f6f\\u4ef6\\uff0c\\u4fdd\\u8bc1\\u89c6\\u9891\\u7f16\\u8f91\\u7684\\u8d28\\u91cf\\uff1b<br \\/>4\\u3001\\u5f71\\u97f3\\u8d44\\u6599\\u7d20\\u6750\\u6574\\u7406\\u5f52\\u6863\\u3002<\\/pre>\",\"claim\":\"<p>\\u5c97\\u4f4d\\u8981\\u6c42\\u5c97\\u4f4d\\u8981\\u6c42\\u5c97\\u4f4d\\u8981\\u6c42\\u5c97\\u4f4d\\u8981\\u6c42\\u5c97\\u4f4d\\u8981\\u6c42<\\/p>\",\"_token\":\"a6c4RrPAO5CyVwc8JpT53RDtRpRcx1fgctcarvKu\",\"_method\":\"PUT\"}', '2018-08-27 10:13:54', '2018-08-27 10:13:54');
+INSERT INTO `admin_operation_log` VALUES ('1826', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-27 10:13:54', '2018-08-27 10:13:54');
+INSERT INTO `admin_operation_log` VALUES ('1827', '1', 'admin/position/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-27 10:14:27', '2018-08-27 10:14:27');
+INSERT INTO `admin_operation_log` VALUES ('1828', '1', 'admin/position/2/edit', 'GET', '127.0.0.1', '[]', '2018-08-27 10:14:37', '2018-08-27 10:14:37');
+INSERT INTO `admin_operation_log` VALUES ('1829', '1', 'admin/position/2', 'PUT', '127.0.0.1', '{\"title\":\"IOS\\u9ad8\\u7ea7\\u5de5\\u7a0b\\u5e08\",\"experience\":\"3\",\"education\":\"2\",\"city\":\"1\",\"type\":\"2\",\"departme\":\"3\",\"position_type\":\"3\",\"num\":\"8\",\"publish\":\"on\",\"expedited\":\"on\",\"description\":\"<p>1\\u3001\\u8d1f\\u8d23\\u57f9\\u8bad\\u90e8\\u89c6\\u9891\\u7684\\u540e\\u671f\\u526a\\u8f91\\u5de5\\u4f5c\\uff1b<br \\/>2\\u3001\\u72ec\\u7acb\\u5b8c\\u6210\\u57fa\\u672c\\u7684\\u97f3\\u89c6\\u9891\\u540e\\u671f\\u526a\\u8f91\\u5236\\u4f5c\\uff0c\\u5e76\\u534f\\u540c\\u5176\\u5b83\\u90e8\\u95e8\\u8f93\\u51fa\\u6700\\u7ec8\\u6210\\u7247\\uff1b<br \\/>3\\u3001\\u6b63\\u786e\\u719f\\u7ec3\\u5730\\u4f7f\\u7528\\u538b\\u7f29\\u526a\\u8f91\\u8f6f\\u4ef6\\uff0c\\u4fdd\\u8bc1\\u89c6\\u9891\\u7f16\\u8f91\\u7684\\u8d28\\u91cf\\uff1b<br \\/>4\\u3001\\u5f71\\u97f3\\u8d44\\u6599\\u7d20\\u6750\\u6574\\u7406\\u5f52\\u6863\\u3002<\\/p>\",\"claim\":\"<p>\\u5c97\\u4f4d\\u8981\\u6c42\\u5c97\\u4f4d\\u8981\\u6c42\\u5c97\\u4f4d\\u8981\\u6c42\\u5c97\\u4f4d\\u8981\\u6c42\\u5c97\\u4f4d\\u8981\\u6c42<\\/p>\",\"_token\":\"a6c4RrPAO5CyVwc8JpT53RDtRpRcx1fgctcarvKu\",\"_method\":\"PUT\"}', '2018-08-27 10:15:10', '2018-08-27 10:15:10');
+INSERT INTO `admin_operation_log` VALUES ('1830', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-27 10:15:11', '2018-08-27 10:15:11');
+INSERT INTO `admin_operation_log` VALUES ('1831', '1', 'admin/position/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2018-08-27 11:36:10', '2018-08-27 11:36:10');
+INSERT INTO `admin_operation_log` VALUES ('1832', '1', 'admin/position/2', 'PUT', '127.0.0.1', '{\"title\":\"IOS\\u9ad8\\u7ea7\\u5de5\\u7a0b\\u5e08\",\"experience\":\"3\",\"education\":\"2\",\"city\":\"1\",\"type\":\"2\",\"departme\":\"3\",\"position_type\":\"3\",\"num\":\"8\",\"publish\":\"on\",\"expedited\":\"on\",\"description\":\"<p>1\\u3001\\u8d1f\\u8d23\\u57f9\\u8bad\\u90e8\\u89c6\\u9891\\u7684\\u540e\\u671f\\u526a\\u8f91\\u5de5\\u4f5c\\uff1b<br \\/>2\\u3001\\u72ec\\u7acb\\u5b8c\\u6210\\u57fa\\u672c\\u7684\\u97f3\\u89c6\\u9891\\u540e\\u671f\\u526a\\u8f91\\u5236\\u4f5c\\uff0c\\u5e76\\u534f\\u540c\\u5176\\u5b83\\u90e8\\u95e8\\u8f93\\u51fa\\u6700\\u7ec8\\u6210\\u7247\\uff1b<br \\/>3\\u3001\\u6b63\\u786e\\u719f\\u7ec3\\u5730\\u4f7f\\u7528\\u538b\\u7f29\\u526a\\u8f91\\u8f6f\\u4ef6\\uff0c\\u4fdd\\u8bc1\\u89c6\\u9891\\u7f16\\u8f91\\u7684\\u8d28\\u91cf\\uff1b<br \\/>4\\u3001\\u5f71\\u97f3\\u8d44\\u6599\\u7d20\\u6750\\u6574\\u7406\\u5f52\\u6863\\u3002<\\/p>\",\"claim\":\"<p>1\\u3001\\u8d1f\\u8d23\\u57f9\\u8bad\\u90e8\\u89c6\\u9891\\u7684\\u540e\\u671f\\u526a\\u8f91\\u5de5\\u4f5c\\uff1b<br \\/>2\\u3001\\u72ec\\u7acb\\u5b8c\\u6210\\u57fa\\u672c\\u7684\\u97f3\\u89c6\\u9891\\u540e\\u671f\\u526a\\u8f91\\u5236\\u4f5c\\uff0c\\u5e76\\u534f\\u540c\\u5176\\u5b83\\u90e8\\u95e8\\u8f93\\u51fa\\u6700\\u7ec8\\u6210\\u7247\\uff1b<br \\/>3\\u3001\\u6b63\\u786e\\u719f\\u7ec3\\u5730\\u4f7f\\u7528\\u538b\\u7f29\\u526a\\u8f91\\u8f6f\\u4ef6\\uff0c\\u4fdd\\u8bc1\\u89c6\\u9891\\u7f16\\u8f91\\u7684\\u8d28\\u91cf\\uff1b<br \\/>4\\u3001\\u5f71\\u97f3\\u8d44\\u6599\\u7d20\\u6750\\u6574\\u7406\\u5f52\\u6863\\u3002<\\/p>\",\"_token\":\"a6c4RrPAO5CyVwc8JpT53RDtRpRcx1fgctcarvKu\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/t.com\\/admin\\/position\"}', '2018-08-27 11:36:16', '2018-08-27 11:36:16');
+INSERT INTO `admin_operation_log` VALUES ('1833', '1', 'admin/position', 'GET', '127.0.0.1', '[]', '2018-08-27 11:36:16', '2018-08-27 11:36:16');
 
 -- ----------------------------
 -- Table structure for `admin_permissions`
@@ -1902,7 +2054,7 @@ CREATE TABLE `admin_users` (
 -- ----------------------------
 INSERT INTO `admin_users` VALUES ('1', 'admin', '$2y$10$DqDiulvJRfwgXSWIV4LhPubYIh2vhyhHGHnbMIH0ysT2rIF8o.geS', 'Administrator', null, 'YUw7dcESbosXURnReixj6VtbVKRr9PqFgUFzjU7AjpeaOLE1Zsvy78CyPqrG', null, '2018-07-04 11:27:30', '2018-07-04 11:27:30');
 INSERT INTO `admin_users` VALUES ('2', 'gdchen', '$2y$10$w4CEgIn9Udn6XCbftj9hYeDKn2HD2mMMQUgNhJrG4.kIbRqGqN1cS', 'chenguodong', null, 'YkeTjdK4KgOC9kpf3GwvJ5j9mzQK1RssOe69D0DNKhgJZubvhvnDh5tWTZem', '4', '2018-07-04 19:33:16', '2018-07-08 14:36:23');
-INSERT INTO `admin_users` VALUES ('3', 'yuexiage', '$2y$10$WEGWEI3g55HiNz8fMuiZt.7Z5E2kRx56XARizRbwpa5HP9zVI2eEe', 'yuexiage', null, 'XEYocQYJeVvHQWqizQjqbkTDgWm4qUAT8pbnmwDkbx9dXlvFJh4fphTL9aL1', '3', '2018-07-07 10:06:52', '2018-07-08 14:36:37');
+INSERT INTO `admin_users` VALUES ('3', 'yuexiage', '$2y$10$WEGWEI3g55HiNz8fMuiZt.7Z5E2kRx56XARizRbwpa5HP9zVI2eEe', 'yuexiage', null, 'vVLpuJOVNzt3J58zSPaAxq6KI3bcE2qwpw2XqKQDPG26sVhp77o7WBxS5amP', '3', '2018-07-07 10:06:52', '2018-07-08 14:36:37');
 
 -- ----------------------------
 -- Table structure for `city`
@@ -2207,12 +2359,14 @@ CREATE TABLE `position` (
   `city` int(11) NOT NULL COMMENT '城市',
   `experience` tinyint(4) NOT NULL COMMENT '工作经验',
   `education` tinyint(4) NOT NULL COMMENT '学历',
+  `expedited` tinyint(4) DEFAULT '1' COMMENT '急聘1是、0否',
   `publish` tinyint(4) NOT NULL COMMENT '发布？1:发布,0未发布',
   `type` tinyint(4) NOT NULL DEFAULT '2' COMMENT '工作类型1:兼职,2:全职',
   `num` smallint(6) NOT NULL COMMENT '招聘人数',
   `departme` smallint(6) NOT NULL COMMENT '招聘部门',
   `position_type` smallint(6) NOT NULL COMMENT '职位类别',
   `description` text COLLATE utf8_unicode_ci NOT NULL COMMENT '职位描述',
+  `delivery` smallint(6) DEFAULT '0' COMMENT '投递数量',
   `claim` text COLLATE utf8_unicode_ci NOT NULL COMMENT '岗位要求',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -2223,8 +2377,8 @@ CREATE TABLE `position` (
 -- ----------------------------
 -- Records of position
 -- ----------------------------
-INSERT INTO `position` VALUES ('1', 'PHP工程师', '2', '1', '1', '1', '1', '3', '4', '1', '<p>111111111111</p>', '<p>22222222222</p>', '2018-07-06 16:39:35', '2018-07-08 15:15:28');
-INSERT INTO `position` VALUES ('2', 'IOS高级工程师', '1', '3', '2', '1', '2', '8', '3', '3', '<p>职位描述职位描述职位描述职位描述职位描述</p>', '<p>岗位要求岗位要求岗位要求岗位要求岗位要求</p>', '2018-07-08 10:56:10', '2018-07-08 15:15:28');
+INSERT INTO `position` VALUES ('1', 'PHP工程师', '2', '1', '1', '1', '1', '1', '0', '4', '1', '<p>111111111111</p>', '0', '<p>22222222222</p>', '2018-07-06 16:39:35', '2018-08-24 15:38:43');
+INSERT INTO `position` VALUES ('2', 'IOS高级工程师', '1', '3', '2', '1', '1', '2', '8', '3', '3', '<p>1、负责培训部视频的后期剪辑工作；<br />2、独立完成基本的音视频后期剪辑制作，并协同其它部门输出最终成片；<br />3、正确熟练地使用压缩剪辑软件，保证视频编辑的质量；<br />4、影音资料素材整理归档。</p>', '0', '<p>1、负责培训部视频的后期剪辑工作；<br />2、独立完成基本的音视频后期剪辑制作，并协同其它部门输出最终成片；<br />3、正确熟练地使用压缩剪辑软件，保证视频编辑的质量；<br />4、影音资料素材整理归档。</p>', '2018-07-08 10:56:10', '2018-08-27 11:36:16');
 
 -- ----------------------------
 -- Table structure for `position_type`
@@ -2275,12 +2429,13 @@ CREATE TABLE `slide` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of slide
 -- ----------------------------
-INSERT INTO `slide` VALUES ('1', '11111', 'images/微信图片_20180709130809.jpg', 'http://t.com/admin/slide/create', '2018-07-18 14:29:22', '2018-07-18 14:29:22');
+INSERT INTO `slide` VALUES ('1', '11111', 'images/552ed9fee0b4b10a.jpg', 'http://t.com/admin/slide/create', '2018-07-18 14:29:22', '2018-08-22 11:43:20');
+INSERT INTO `slide` VALUES ('2', '2222222', 'images/d8ff34b6513abf17.jpg', 'http://t.com/admin/slide/create', '2018-08-22 11:47:43', '2018-08-22 11:47:43');
 
 -- ----------------------------
 -- Table structure for `users`

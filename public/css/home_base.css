@@ -94,7 +94,7 @@ relative*/
     transition: all 0.3s ease;
 }
 .tm-color-primary {
-    color: #ee5057;
+    color: #009688;
 }
 .tm-margin-b-20 {
     margin-bottom: 20px;
@@ -174,8 +174,8 @@ pad*/
     font-size: 0.75rem;
 }
 .btn-primary {
-    background-color: #ee5057;
-    border-color: #ee5057;
+    background-color: #009688;
+    border-color: #009688;
     border-radius: 0;
     cursor: pointer;
     font-size: 0.7rem;
@@ -194,7 +194,7 @@ pad*/
     font-weight: 300;
 }
 .form-control:focus {
-    border-color: #ee5057;
+    border-color: #009688;
     box-shadow: 0 0 0 0.2rem rgba(238,80,87,.25);
 }
 /*
@@ -222,7 +222,7 @@ footer*/
 }
 .position_list a:hover{
     text-decoration: none;
-    color: #ee5057;
+    color: #009688;
 }
 
 /*
@@ -322,4 +322,22 @@ footer*/
 .breadcrumb{
     font-size: 14px !important;
     background-color: #ffffff;
+}
+
+/*
+职位说明*/
+.mr10 {
+    margin-right: 10px;
+}
+.mt25 {
+    margin-top: 25px;
+}
+.mb15 {
+    margin-bottom: 15px;
+}
+.f18 {
+    font-size: 18px;
+}
+.c333 {
+    color: #333;
 }

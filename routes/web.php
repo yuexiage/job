@@ -19,6 +19,8 @@ Route::group(['namespace' => 'Web'], function () {
     Route::get('/home', 'HomeController@index');
     Route::get('/position/id/{id}', 'PositionController@index')->name('position_item');
     Route::get('/position_list/{type}', 'PositionListController@index')->name('position_list');
+    Route::get('/citylist/{type}', 'PositionListController@cityList')->name('citylist');
+    Route::get('/getallpostion/{type}', 'PositionListController@getAllPostion')->name('get_all_postion');
 });
 
 

@@ -8,7 +8,7 @@
         <div class="position_panel w1200 ">
             <div class="w680 fl bg mb20">
                 <div class="mt20 breadcrumb c999 f12 icon pl20 bp1">
-                    <i class="fa fa-home" aria-hidden="true"></i>&nbsp;首页&gt;<span class="ml3">{{$job_type[$menu]}}&gt;</span><span class="ml3">职位列表</span>
+                    <i class="fa fa-home" aria-hidden="true"></i><a href="/">首页</a>&gt;<span class="ml3"><a href="{{url('/position_list/'.$type )}}">{{$job_type[$menu]}}</a>&gt;</span><span class="ml3">职位列表</span>
                 </div>
                 <div class="mt30 wp94 border_red m0 h50 lh50 pr" style="height:44px;border: 2px solid rgb(34, 172, 56);">
                     <a class="fl c333 pl20 pr20 border_right" href="javascript:void(0)" id="searchInputTypeArea" title="{{$job_type[$menu]}}招聘">
@@ -21,18 +21,37 @@
                     <input type="hidden" id="workPlaceNameV" name="workPlaceNameV" value="">
                     <div class="overhidden mt15 workPlaceArea">
                         <span class="fl icon  f12 bp7 c999">工作地点</span>
-                        <p class="fl f12 w560 ml15 lh20 mt0">
-                              <span class="w150 LocalDataUIC  fl" title="选择查询工作地点"  href="javascript:void(0)">
-                                  <i class="placeholder"></i>
-                                  <span class="items ml5 fl" style="left: 5px; height: 20px;"></span>
-                                  <input type="text" readonly="readonly" unselectable="on" class="LocalDataUIC-input jHolder job_city" placeholder="选择查询工作地点">
-                                  <!-- <em class="fr icon pl15 f12 bp7 c999" style="height: 20px;"></em> -->
-                              </span>
-                        </p>
+                        <ul class="fl f12 w560 ml15 lh20 mt0">
+                              {!! $citys !!}
+                        </ul>
                     </div>
                 </div>
 
                 <div class="mt22 m0 wp94">
+                    <table id="position_list"></table>
+                    <input type="hidden" name="type" value="{{$menu}}">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <ul class="overhidden bgc_f4 lh40 f15 c333">
                         <li class="fl ml8 w220" style="width:380px;">职位名称</li>
                         <li class="fl w100 tl" style="width:100px;">职位类别</li>
@@ -82,78 +101,66 @@
             <div class="w280 fr mb20">
                 <div class="w280 bg pt20">
                     <div class="ml20 c333 f18">最新职位</div>
-                    @foreach($new_positin_list as $row)
-                        <div class="ml20 mt10 border_dashed mr20">
-                            <span class="fl bg_btn_green bg_btn_small f10 lh14 cfff mt8 mr10 w30 tc" style="background-color: #FF5722;">{{$job_type[$row->type]}}</span>
-                            <a class="c666 lh30" href="{{url('/position/id/'.$row->id)}}"><font title="{{$row->title}}">{{$row->title}}</font></a>
-                            <div class="f12 c999 overhidden pb10 lh24">
-                                <span class="Clearfix fl mr50  bp4 "><font title="{{isset($row->cityName->name)?$row->cityName->name:''}}" initialletter="B"><i class="fa fa-map-marker" aria-hidden="true"></i>{{isset($row->cityName->name)?$row->cityName->name:''}}</font></span>
-                                <span class="Clearfix fl bp5 pl15"><i class="fa fa-clock-o" aria-hidden="true"></i>{{$row->created_at}}</span>
+                    @if (count($new_positin_list)>0)
+                        @foreach($new_positin_list as $row)
+                            <div class="ml20 mt10 border_dashed mr20">
+                                <span class="fl bg_btn_green bg_btn_small f10 lh14 cfff mt8 mr10 w30 tc" style="background-color: #FF5722;">{{$job_type[$menu]}}</span>
+                                <a class="c666 lh30" href="{{url('/position/id/'.$row->id)}}"><font title="{{$row->title}}">{{$row->title}}</font></a>
+                                <div class="f12 c999 overhidden pb10 lh24">
+                                    <span class="Clearfix fl mr50  bp4 "><font title="{{isset($row->cityName->name)?$row->cityName->name:''}}" initialletter="B"><i class="fa fa-map-marker" aria-hidden="true"></i>{{isset($row->cityName->name)?$row->cityName->name:''}}</font></span>
+                                    <span class="Clearfix fl bp5 pl15"><i class="fa fa-clock-o" aria-hidden="true"></i>{{$row->created_at}}</span>
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
-                    <a class="block f12 c999 lh40 tr mr20" href="{{url('/position_list/'.$row->type )}}">更多职位&gt;</a>
+                        @endforeach
+                        <a class="block f12 c999 lh40 tr mr20" href="{{url('/position_list/'.$menu )}}">更多职位&gt;</a>
+                    @else
+                        <a class="block f12 c999 lh40 tr mr20" href="###">没有更多职位&gt;</a>
+                    @endif
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
     <script>
-        layui.use(['layer', 'form','laypage'], function(){
+        layui.use(['layer', 'form','laypage','table'], function(){
             var layer = layui.layer
                 ,form = layui.form
-                ,laypage = layui.laypage;
-
-            function getList(curr,limit){
-                var positionNameV  = $("#positionNameV").val();
-                var job_city       = $(".job_city").val();
-                var info = {'positionNameV':positionNameV,'job_city':job_city,'curr':curr,'limit':limit};
-                if($.trim(curr)=='' && $.trim(limit)==''){
-                    layer.alert('信息错误');
-                }
-                $.ajax({
-                    method: 'get',
-                    url: "{{url('/getallpostion/')}}/{{$type}}",
-                    data:info ,
-                    async: false,
-                    success: function (data) {
-                        total = data.total
-                        position_list = data.data;
-                    }
-                })
-            }
-            getList(1,10);
-
-             laypage.render({
-                elem: 'test1'
-                ,count: total //数据总数，从服务端得到
-                ,jump: function(obj, first){
-                    //obj包含了当前分页的所有参数，比如：
-                    console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
-                    console.log(obj.limit); //得到每页显示的条数
-                    if(!first){
-                        getList(obj.curr,obj.limit);
-                    }
-                }
-            });
-
-
-
-
-
-            $(".LocalDataUIC-input").click(function () {
-                layer.open({
-                    type: 2,
-                    shade: false,
-                    title:'选择工作地点',
-                    area: '500px',
-                    content: "{{url('/citylist/')}}/{{$type}}",
-                    zIndex: layer.zIndex, //重点1
-                    success: function(layero){
-                        layer.setTop(layero); //重点2
-                    }
-                });
+                ,laypage = layui.laypage,
+                table = layui.table;
+            var token = $('meta[name="csrf-token"]').attr('content');
+            var type  = $('input[name="type"]').val();
+            table.render({
+                   elem: '#position_list'
+                ,method:  'post'
+                ,height:  312
+                 ,width:  800
+                 ,where:  {'_token':token,'type':type,'keyword':'北京'}
+                   ,url:   '{{url('/getallpostion/')}}' //数据接口
+                  ,page:   true //开启分页
+                 ,limit:   20
+                  ,cols: [[ //表头
+                        {field: 'id', title: 'ID', width:50,align:'center'}
+                        ,{field: 'title', title: '职位名称',width:292,templet: '#titleTpl'}
+                        ,{field: 'type', title: '职位类别' ,align:'center',width:100,templet: '#positionTypeTpl'}
+                        ,{field: 'city_name', title: '工作地点',align:'center',width:100,templet: '#city_nameTpl'}
+                        ,{field: 'departme_name', title: '招聘部门',align:'center',width:100,templet: '#departmeTpl'}
+                        ,{field: 'created_at', title: '发布时间', align:'center',width:150}
+                ]]
             });
         });
     </script>
+    <script type="text/html" id="titleTpl">
+        <a href="/?table-demo-id=@{{d.id}}" class="layui-table-link" target="_blank">@{{ d.title }}</a>
+    </script>
+    <script type="text/html" id="city_nameTpl">
+        <span style="color:#FFB800" >@{{ d.city_name.name }}</span>
+    </script>
+    <script type="text/html" id="departmeTpl">
+        @{{ d.departme_name.departme_name }}
+    </script>
+    <script type="text/html" id="positionTypeTpl">
+        @{{ (d.type==1)?'全职':"兼职" }}
+    </script>
+
+
 @endsection

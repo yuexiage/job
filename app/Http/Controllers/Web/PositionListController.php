@@ -22,6 +22,8 @@ class PositionListController extends BestController
         $view_data                      = $this->bestinfo;
         $view_data['new_positin_list']  = $this->_getNewPosition($type);
         $view_data['type']              = $type;
+        $citys                          = $this->_getCityLi($type);
+        $view_data['citys']             = $citys;
         return view('web/position_list',$view_data);
     }
 
@@ -36,6 +38,42 @@ class PositionListController extends BestController
         $where['type']      = $type;
         $newPosition        = PositionModel::where($where)->limit(10)->orderBy('created_at','DESC')->with('cityName')->get();
         return $newPosition;
+    }
+
+    /**
+     * @param Request $request
+     * 获取所有招聘信息并且根据调解过滤
+     */
+    public function selectPositionDate(Request $request){
+        $input              = $request->all();
+
+        $page               = $input['page'];
+        $pageSize           = $input['limit'];
+
+        $where              = [];
+        $where['publish']   = 1;
+        $where['type']      = $input['type'];
+        $allPosition        = PositionModel::where($where)->orderBy('created_at','DESC')->with(['cityName','departmeName','positionTypeName']);
+
+        //如果搜索客关键字，那么可搜索范围除了本身还包括关联的城市、部门、类型
+        if(!empty($input['keyword'])){
+            $keyword = $input['keyword'];
+            $allPosition->where('title', 'like', '%'.$keyword.'%');
+
+            $allPosition->orWhereHas('cityName', function($query)use( $keyword ){
+                $query->where('name','like', '%'.$keyword.'%');
+            });
+           /* $allPosition->orWhereHas('departmeName', function($query)use( $keyword ){
+                $query->where('departme_name','like', '%'.$keyword.'%');
+            });
+            $allPosition->orWhereHas('positionTypeName', function($query)use( $keyword ){
+                $query->where('name','like', '%'.$keyword.'%');
+            });*/
+        }
+        $recordCount        = $allPosition->count();
+        $list = $allPosition->forpage($page, $pageSize)->get();
+        $data = ['code'=>0,'msg'=>'','data'=>$list,'count'=>$recordCount];
+        return response()->json($data);
     }
 
     /**
@@ -56,7 +94,9 @@ class PositionListController extends BestController
                 }
             }
         }
-        $allPosition        = PositionModel::where($where)->orderBy('created_at','DESC')->with('cityName')->get();
+
+
+        $allPosition        = PositionModel::where($where)->orderBy('created_at','DESC')->with(['cityName','departmeName','positionTypeName'])->get();
         return $allPosition;
     }
 
@@ -84,7 +124,7 @@ class PositionListController extends BestController
         foreach ($newPosition as $val){
             if (isset($val->cityName->name) && !isset($citys[$val->cityName->name])){
                 $citys[$val->cityName->name] = $val->cityName->name;
-                $html.= '<li class="item w75 tc fl" id = "'.$val->cityName->id.'">'.$val->cityName->name.'</li>';
+                $html.= '<li class="item tc fl" id = "'.$val->cityName->id.'"><span class="layui-badge-rim">'.$val->cityName->name.'</span></li>';
             }
         }
         return $html;
@@ -106,13 +146,14 @@ class PositionListController extends BestController
          if(trim($title)!=''){
              $_where['like'] = ['title','%'.$title.'%'];
          }
-         //TODO 城市判断
-         $curr      =   $input['curr'];
-         $limit     =   $input['limit'];
-         $offset    =   ($curr-1)*$limit;
-         $allosition  = $this->_getAllPosition($type,$_where);
-         $position  = $this->_getPosition($type,$_where,$limit,$offset);
-         $result=['total'=>count($allosition->toArray()),'data'=>$position];
+         $city          =  $input['city'];
+         $_where['city'] = $city;
+         $curr          =  $input['curr'];
+         $limit         =  $input['limit'];
+         $offset        =  ($curr-1)*$limit;
+         $allposition    =  $this->_getAllPosition($type,$_where);
+         $position      =  $this->_getPosition($type,$_where,$limit,$offset);
+         $result        =  ['total'=>count($allposition->toArray()),'data'=>$position];
          echo json_encode($result,JSON_FORCE_OBJECT);
      }
 }

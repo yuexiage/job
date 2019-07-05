@@ -317,6 +317,9 @@ footer*/
     font-size: 14px !important;
     background-color: #ffffff;
 }
+.breadcrumb a{
+    color:#999;
+}
 .block {
     display: block;
 }
@@ -560,6 +563,9 @@ a.bg_search:link {
     width: 75px;
 }
 
+.w45 {
+    width: 75px;
+}
 
 .ml5 {
     margin-left: 5px;
@@ -597,4 +603,8 @@ a.bg_search:link {
 
 .mt22 {
     margin-top: 22px;
+}
+
+.workPlaceArea .item{
+    margin-right: 10px;
 }

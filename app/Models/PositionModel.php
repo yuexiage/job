@@ -13,7 +13,7 @@ class PositionModel extends Model
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     function cityName(){
-        return $this->hasOne(CityModel::class,'id', 'city');
+        return $this->hasOne(CityModel::class,'id', 'city')->select('id','name');
     }
 
     /**
@@ -37,10 +37,14 @@ class PositionModel extends Model
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     function departmeName(){
-        return $this->hasOne(DepartmeModel::class,'id', 'departme');
+        return $this->hasOne(DepartmeModel::class,'id', 'departme')->select('id','departme_name');
     }
 
+    /**
+     * @return mixed
+     * 职位类别
+     */
     function positionTypeName(){
-        return $this->hasOne(PositionTypeModel::class,'id', 'position_type');
+        return $this->hasOne(PositionTypeModel::class,'id', 'position_type')->select('id','name');
     }
 }

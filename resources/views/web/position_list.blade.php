@@ -11,11 +11,11 @@
                     <i class="fa fa-home" aria-hidden="true"></i><a href="/">首页</a>&gt;<span class="ml3"><a href="{{url('/position_list/'.$type )}}">{{$job_type[$menu]}}</a>&gt;</span><span class="ml3">职位列表</span>
                 </div>
                 <div class="mt30 wp94 border_red m0 h50 lh50 pr" style="height:44px;border: 2px solid rgb(34, 172, 56);">
-                    <a class="fl c333 pl20 pr20 border_right" href="javascript:void(0)" id="searchInputTypeArea" title="{{$job_type[$menu]}}招聘">
+                    <a class="fl c333 pl20 pr20 border_right" href="javascript:void(0)"  title="{{$job_type[$menu]}}招聘">
                         {{$job_type[$menu]}}招聘
                     </a>
                     <input class="fl lh50 h50 outline-none f14 wp66 c999 pl10 jHolder" type="text" placeholder="搜索职位名称" title="搜索职位名称" id="positionNameV" name="positionNameV" value="	IOS高级工">
-                    <a class="fr f18 cfff pl46 pr20 bg_search icon bp10" style="padding-right: 10px; background-color: rgb(34, 172, 56);" href="javascript:void(0)" ><i class="layui-icon" style="font-size: 18px;">&#xe615;</i>&nbsp;职位搜索</a>
+                    <a class="fr f18 cfff pl46 pr20 bg_search icon bp10" id="searchInputTypeArea" style="padding-right: 10px; background-color: rgb(34, 172, 56);" href="javascript:void(0)" ><i class="layui-icon" style="font-size: 18px;">&#xe615;</i>&nbsp;职位搜索</a>
                 </div>
                 <div class="m0 wp94 mt20">
                     <input type="hidden" id="workPlaceNameV" name="workPlaceNameV" value="">
@@ -26,77 +26,10 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="mt22 m0 wp94">
-                    <table id="position_list"></table>
+                    <table id="position_list" class="layui-table" lay-data="{id: 'table_id'}"></table>
                     <input type="hidden" name="type" value="{{$menu}}">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <ul class="overhidden bgc_f4 lh40 f15 c333">
-                        <li class="fl ml8 w220" style="width:380px;">职位名称</li>
-                        <li class="fl w100 tl" style="width:100px;">职位类别</li>
-                        <li class="fl w100 tl" style="width:100px;">工作地点</li>
-                        <li class="fl w100 tl" style="width:px;">发布时间</li>
-                    </ul>
-                    <div id="postList">
-                        <ul class="overhidden c333 mt20 lh24">
-                            <li class="fl ml8 w220" style="width:380px">
-                                <input type="checkbox" class="middle fl" value="182202">
-                                <span class="ml10 middle hand fl theme_color postNameC" data-postid="182202" data-recruittype="2" onclick="postDetail(this)" importpost="0" title="高级算法工程师（风险政策）6010" style="max-width:330px;">
-                                    高级算法工程师（风险政策）6010
-                                </span>
-                            </li>
-                            <li class="fl w100 tl toe" style="width:100px" title="金融类">金融类</li>
-                            <li class="fl w100 tl toe" style="width:100px" title="北京市-海淀区">北京市-海淀区</li>
-                            <li class="fl w80 tl" style="width:px">2018-12-07</li>
-                            <li class="fl"><i class="layui-icon">&#xe61a;</i></a>
-                            </li>
-                        </ul>
-                        <div class="kuang p20 pr mt10 ml10 mr10" id="182202" style="display: none;">
-                            <span class="Clearfix pa left20 top-8">
-                                <img src="/wt/images/web/style300/arrow.jpg">
-                            </span>
-                            <div class="c333 mb10">职位描述</div>
-                            <p class="lh20 f12 c666">1、利用多种算法挖掘数据内在的模式和特征，基于业务需求进行专项分析，发现潜在规律；
-                                <br>为风险管理提供决策支持；
-                                <br>2、深入挖掘多个内外部数据，构建贷前、贷后风险变量集市并定期维护和更新；
-                                <br>3、全流程参与特征工程、样本选取、算法训练、模型验证测试、算法部署及冠军挑战等工作。</p>
-                            <div class="c333 mt20 mb10">任职要求</div>
-                            <p class="lh20 f12 c666">1、计算机、统计学、数学、数理统计等相关专业，本科以上学历；
-                                <br>2、熟练掌握python、SQL；
-                                <br>3、扎实的理论和算法基础，精通决策树、逻辑回归，随机森林，GBDT等数据挖掘算法；同时掌握无监督算法。
-                                <br>4、有信贷、汽车金融相关业务经验优先；
-                                <br>5、具备良好的团队协作意识、沟通能力，有较强的学习能力及责任心，能够承担工作压力。</p>
-                            <input type="hidden" id="submitUserId_182202" class="lh20 f12 c666" value="391947adfb773d57">
-                            <div class="overhidden mt20 ml100">
-                                <a class="bg_btn_colo_extend fl lh38 wp23 tc cfff f16 mrp bg_btn_big" href="javascript:void(0)" onclick="positionRegist(182202)">投递此职位</a>
-                                <a class="bg_btn_colo_extend fl lh38 wp23 tc cfff f16 mrp bg_btn_big" href="javascript:void(0)" onclick="addAlternativePost(182202)">收藏职位</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="test1"></div>
                 </div>
-
             </div>
             <div class="w280 fr mb20">
                 <div class="w280 bg pt20">
@@ -123,22 +56,23 @@
     </div>
     <script>
         layui.use(['layer', 'form','laypage','table'], function(){
-            var layer = layui.layer
-                ,form = layui.form
-                ,laypage = layui.laypage,
-                table = layui.table;
-            var token = $('meta[name="csrf-token"]').attr('content');
-            var type  = $('input[name="type"]').val();
-            table.render({
-                   elem: '#position_list'
-                ,method:  'post'
-                ,height:  312
-                 ,width:  800
-                 ,where:  {'_token':token,'type':type,'keyword':'北京'}
-                   ,url:   '{{url('/getallpostion/')}}' //数据接口
-                  ,page:   true //开启分页
-                 ,limit:   20
-                  ,cols: [[ //表头
+            var layer       = layui.layer
+                ,form       = layui.form
+                ,laypage    = layui.laypage,
+                table       = layui.table;
+            var token       = $('meta[name="csrf-token"]').attr('content');
+            var type        = $('input[name="type"]').val();
+            var keyword     = $('input[name="positionNameV"]').val();
+            var tableIns    = table.render({
+                   elem:'#position_list'
+                ,method:'post'
+                ,height:312
+                 ,width:800
+                 ,where:{'_token':token,'type':type,'keyword':keyword}
+                   ,url: '{{url('/getallpostion/')}}' //数据接口
+                  ,page:true //开启分页
+                 ,limit:20
+                  ,cols:[[ //表头
                         {field: 'id', title: 'ID', width:50,align:'center'}
                         ,{field: 'title', title: '职位名称',width:292,templet: '#titleTpl'}
                         ,{field: 'type', title: '职位类别' ,align:'center',width:100,templet: '#positionTypeTpl'}
@@ -146,6 +80,17 @@
                         ,{field: 'departme_name', title: '招聘部门',align:'center',width:100,templet: '#departmeTpl'}
                         ,{field: 'created_at', title: '发布时间', align:'center',width:150}
                 ]]
+            });
+            //搜索
+            $("#searchInputTypeArea").click(function () {
+                var search     = $('input[name="positionNameV"]').val();
+                var where      = {'_token':token,'type':type,'keyword':search};
+                tableIns.reload({
+                    where: where
+                    ,page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                });
             });
         });
     </script>

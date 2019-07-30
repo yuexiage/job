@@ -58,22 +58,16 @@ class PositionListController extends BestController
         //如果搜索客关键字，那么可搜索范围除了本身还包括关联的城市、部门、类型
         if(!empty($input['keyword'])){
             $keyword = $input['keyword'];
-            $allPosition->where('title', 'like', '%'.$keyword.'%');
-
-            //城市
-            $allPosition->orWhereHas('cityName', function($query)use( $keyword ){
-                $query->where('name','like', '%'.$keyword.'%');
+            $allPosition->where(function ($query) use ($keyword){
+                $query->where('title', 'like', '%'.$keyword.'%')->orWhereHas('cityName', function($query)use( $keyword ){
+                    $query->where('name','like', '%'.$keyword.'%');
+                })->orWhereHas('departmeName', function($query)use( $keyword ){
+                    $query->where('departme_name','like', '%'.$keyword.'%');
+                })->orWhereHas('positionTypeName', function($query)use( $keyword ){
+                    $query->where('name','like', '%'.$keyword.'%');
+                });
             });
 
-            //部门
-            $allPosition->orWhereHas('departmeName', function($query)use( $keyword ){
-                $query->where('departme_name','like', '%'.$keyword.'%');
-            });
-
-            //职位类别
-            $allPosition->orWhereHas('positionTypeName', function($query)use( $keyword ){
-                $query->where('name','like', '%'.$keyword.'%');
-            });
         }
         $recordCount        = $allPosition->count();
         $list = $allPosition->forpage($page, $pageSize)->get();

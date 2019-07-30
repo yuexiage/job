@@ -608,3 +608,8 @@ a.bg_search:link {
 .workPlaceArea .item{
     margin-right: 10px;
 }
+
+/*登录*/
+.login-container{
+    padding:100px 20px 50px 20px;
+}

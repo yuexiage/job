@@ -15,6 +15,7 @@ class BestController extends Controller
         $this->bestinfo             = $this->_getSetting();
         $this->bestinfo['menu']     = $this->_getMenu();
         $this->bestinfo['job_type'] = PositionModel::$type;
+        session(['bestinfo' => $this->bestinfo]);
     }
 
     /**

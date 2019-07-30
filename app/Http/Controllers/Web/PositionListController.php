@@ -60,15 +60,20 @@ class PositionListController extends BestController
             $keyword = $input['keyword'];
             $allPosition->where('title', 'like', '%'.$keyword.'%');
 
+            //城市
             $allPosition->orWhereHas('cityName', function($query)use( $keyword ){
                 $query->where('name','like', '%'.$keyword.'%');
             });
-           /* $allPosition->orWhereHas('departmeName', function($query)use( $keyword ){
+
+            //部门
+            $allPosition->orWhereHas('departmeName', function($query)use( $keyword ){
                 $query->where('departme_name','like', '%'.$keyword.'%');
             });
+
+            //职位类别
             $allPosition->orWhereHas('positionTypeName', function($query)use( $keyword ){
                 $query->where('name','like', '%'.$keyword.'%');
-            });*/
+            });
         }
         $recordCount        = $allPosition->count();
         $list = $allPosition->forpage($page, $pageSize)->get();

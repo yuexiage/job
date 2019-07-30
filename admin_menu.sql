@@ -2095,7 +2095,7 @@ CREATE TABLE `departme` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `departme_name` varchar(50) DEFAULT NULL COMMENT '部门名称',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 

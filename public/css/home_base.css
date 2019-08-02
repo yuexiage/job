@@ -610,6 +610,6 @@ a.bg_search:link {
 }
 
 /*登录*/
-.login-container{
+.login-container,.register-container{
     padding:100px 20px 50px 20px;
 }

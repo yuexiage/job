@@ -37,7 +37,7 @@
         </a>
         <ul class="layui-nav" lay-filter="">
             <li class="layui-nav-item
-            @if(!empty($menu))
+            @if(!empty(session('bestinfo')['menu']))
             layui-this
             @endif
             "><a href="/">首页</a></li>
@@ -45,6 +45,20 @@
             <li class="layui-nav-item {{session('bestinfo')['menu']==$key?'layui-this':''}}" ><a href="{{url('/position_list/'.$key )}}">{{$row}}</a></li>
             @endforeach
             <li class="layui-nav-item"><a href="">关于我们</a></li>
+            @if (Route::has('login'))
+                @auth
+                    <a href="{{ url('/home') }}">Home</a>
+                @else
+                    <li class="layui-nav-item">
+                    <a href="{{ route('login') }}">{{ __('login') }}</a>
+                    </li>
+                    @if (Route::has('register'))
+                        <li class="layui-nav-item">
+                        <a href="{{ route('register') }}">{{ __('register') }}</a>
+                        </li>
+                    @endif
+                @endauth
+            @endif
         </ul>
     </div>
 </div>
